@@ -1,3 +1,6 @@
+/* Usage of modern normalize */
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,7 +14,22 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Colors */
+  --color-white: #ffffff; /* White */
+  --color-light-background: #E0F1E8; /* Green 200 */
+  --color-dark-accent: #0C7D69; /* Green 600 */
+  --color-dark-text: #2A4144;  /* Grey 900 */
+  --color-soft: #86A2A5; /* Grey 500 */
+  --color-error: #D73C3C; /* Red (Errors) */
+
+  /* Animation */
+  --animation: 150ms ease-in;
 }
+
+/* Breakpoints */
+@custom-media --tablet-bp (min-width: 768px);
+@custom-media --desktop-bp (min-width: 1440px);
 
 a {
   font-weight: 500;
