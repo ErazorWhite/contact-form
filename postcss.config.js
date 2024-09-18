@@ -1,4 +1,4 @@
-module.exports = (ctx) => ({
+export default (ctx) => ({
     map: ctx.env === 'development' ? ctx.map : false,
     plugins: {
         '@csstools/postcss-global-data': {
