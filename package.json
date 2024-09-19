@@ -1,7 +1,8 @@
 {
   "name": "contact-form",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "homepage": "https://ErazorWhite.github.io/contact-form/",
   "type": "module",
   "scripts": {
     "dev": "vite",
