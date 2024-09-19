@@ -90,8 +90,7 @@ body {
     font-family: 'Body SM (Regular)', 'serif';
     color: var(--color-grey-900);
     margin: 0;
-    display: flex;
-    place-items: center;
+    padding-top: 32px;
     min-width: 320px;
     min-height: 100vh;
 }
