@@ -1,4 +1,4 @@
-export const IconUnchecked = ({ size = 20 }) => {
+export const IconRadiobuttonUnchecked = ({ size = 20 }) => {
   return (
     <svg
       width={size}

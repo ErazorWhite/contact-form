@@ -1,4 +1,4 @@
-export const IconChecked = ({ size = 20 }) => {
+export const IconRadiobuttonChecked = ({ size = 20 }) => {
   return (
     <svg
       width={size}
