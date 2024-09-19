@@ -1,145 +1,90 @@
 import React from 'react';
-import { useFormik } from 'formik';
+import { Form, Formik } from 'formik';
 import css from './ContactUsForm.module.css';
-import clsx from 'clsx';
-import { IconChecked } from '../../assets/icons/IconChecked.jsx';
-import { IconUnchecked } from '../../assets/icons/IconUnchecked.jsx';
+import * as Yup from 'yup';
+import { FormCheckbox } from '../FormCheckbox/FormCheckbox.jsx';
+import { FormTextInput } from '../FormTextInput/FormTextInput.jsx';
+import { FormRadioGroup } from '../FormRadioGroup/FormRadioGroup.jsx';
+import { FormTextArea } from '../FormTextArea/FormTextArea.jsx';
 
 export const ContactUsForm = () => {
-  const formik = useFormik({
-    initialValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      message: '',
-    },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
   return (
-    <form className={css.form} onSubmit={formik.handleSubmit}>
+    <div className={css.formThumb}>
       <h1 className={css.textHeader}>Contact Us</h1>
 
-      <ul>
-        <li className={css.inputItem}>
-          <div className={css.labelThumb}>
-            <label className={css.textLabel} htmlFor="firstName">
-              First Name
-            </label>
-            <span>*</span>
-          </div>
-
-          <input
-            className={css.inputText}
-            id="firstName"
+      <Formik
+        initialValues={{
+          firstName: '',
+          lastName: '',
+          email: '',
+          queryType: '',
+          message: '',
+          acceptedTerms: false,
+        }}
+        validationSchema={Yup.object({
+          firstName: Yup.string()
+            .max(15, 'Must be 15 characters or less')
+            .required('Required'),
+          lastName: Yup.string()
+            .max(20, 'Must be 20 characters or less')
+            .required('Required'),
+          email: Yup.string()
+            .email('Invalid email address')
+            .required('Required'),
+          queryType: Yup.string().required('Required'),
+          message: Yup.string().required('Required'),
+          acceptedTerms: Yup.boolean()
+            .required('Required')
+            .oneOf([true], 'You must accept the terms and conditions.'),
+        })}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+        }}
+      >
+        <Form>
+          <FormTextInput
+            label="First Name"
             name="firstName"
-            type="firstName"
-            onChange={formik.handleChange}
-            value={formik.values.firstName}
+            type="text"
           />
-        </li>
-        <li className={css.inputItem}>
-          <div className={css.labelThumb}>
-            <label className={css.textLabel} htmlFor="lastName">
-              Last Name
-            </label>
-            <span>*</span>
-          </div>
 
-          <input
-            className={css.inputText}
-            id="lastName"
+          <FormTextInput
+            label="Last Name"
             name="lastName"
-            type="lastName"
-            onChange={formik.handleChange}
-            value={formik.values.lastName}
+            type="text"
           />
-        </li>
-        <li className={css.inputItem}>
-          <div className={css.labelThumb}>
-            <label className={css.textLabel} htmlFor="email">
-              Email Address
-            </label>
-            <span>*</span>
-          </div>
 
-          <input
-            className={css.inputText}
-            id="email"
+          <FormTextInput
+            label="Email"
             name="email"
             type="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
           />
-        </li>
-        <li className={css.inputItem}>
-          <div className={css.labelThumb}>
-            <label className={css.textLabel} htmlFor="email">
-              Query Type
-            </label>
-            <span>*</span>
-          </div>
 
-          <ul>
-            <li className={css.radioItem}>
-              <div className={clsx(css.inputText, css.radioThumb)}>
-                <input
-                  className="visually-hidden"
-                  type="radio"
-                  id="general"
-                  name="queryType"
-                  value="general"
-                />
-                <IconUnchecked />
-                <label htmlFor="general">General Enquiry</label>
-              </div>
-            </li>
-            <li className={css.radioItem}>
-              <div className={clsx(css.inputText, css.radioThumb)}>
-                <input
-                  className="visually-hidden"
-                  type="radio"
-                  id="support"
-                  name="queryType"
-                  value="support"
-                />
-                <IconUnchecked />
-                <label htmlFor="support">Support Request</label>
-              </div>
-            </li>
-          </ul>
-        </li>
-
-        <li className={css.inputItem}>
-          <div className={css.labelThumb}>
-            <label className={css.textLabel} htmlFor="message">
-              Message
-            </label>
-            <span>*</span>
-          </div>
-
-          <textarea
-            className={clsx(css.inputText, css.textArea)}
-            id="message"
-            name="message"
-            onChange={formik.handleChange}
-            value={formik.values.message}
+          <FormRadioGroup
+            groupName="Query Type"
+            name="queryType"
+            options={[
+              { value: 'general', label: 'General Enquiry' },
+              { value: 'support', label: 'Support Request' },
+            ]}
           />
-        </li>
-      </ul>
 
-      <div className={css.checkBoxThumb}>
-        <input id="terms" type="checkbox" />
-        <label className={css.textLabel} htmlFor="terms">
-          I consent to being contacted by the team <span className={css.asteriskAccent}>*</span>
-        </label>
-      </div>
+          <FormTextArea id="message" name="message">
+            Message
+          </FormTextArea>
 
-      <button className={css.submitButton} type="submit">
-        Submit
-      </button>
-    </form>
+          <FormCheckbox id="acceptedTerms" name="acceptedTerms">
+            I consent to being contacted by the team *
+          </FormCheckbox>
+
+          <button className={css.submitButton} type="submit">
+            Submit
+          </button>
+        </Form>
+      </Formik>
+    </div>
   );
 };

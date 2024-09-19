@@ -1,0 +1,18 @@
+.checkboxThumb {
+    display: flex;
+    padding-bottom: 40px;
+
+    & label {
+        word-wrap: break-word;
+        display: flex;
+        gap: 16px;
+        overflow-wrap: break-word;
+    }
+
+}
+
+.checkboxMark {
+    width: 24px;
+    display: block;
+    align-content: center;
+}
