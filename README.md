@@ -11,22 +11,22 @@ The rule was that you could use any tools you liked to help you complete the cha
 
 ## Features
 
-- Form Submission Success: 
-- - Complete the form and see a success toast message upon successful submission.
-- Form Validation Messages:
-- - Receive validation messages if:
-- - - A required field has been missed.
-- - - The email address is not formatted correctly.
-- Keyboard Accessibility:
-- - Complete the form using only the keyboard.
-- Screen Reader Support:
-- - Inputs, error messages, and the success message are announced on screen readers.
-- Responsive Design:
-- - View the optimal layout of the interface depending on your device's screen size.
-- Interactive Elements:
-- - See hover and focus states for all interactive elements on the page.
-- Project Setup:
-- - Download the project and read the README.md file for further details and setup instructions.
+#### Form Submission Success: 
+- Complete the form and see a success toast message upon successful submission.
+#### Form Validation Messages:
+Receive validation messages if:
+- A required field has been missed.
+- The email address is not formatted correctly.
+#### Keyboard Accessibility:
+- Complete the form using only the keyboard.
+#### Screen Reader Support:
+- Inputs, error messages, and the success message are announced on screen readers.
+#### Responsive Design:
+- View the optimal layout of the interface depending on your device's screen size.
+#### Interactive Elements:
+- See hover and focus states for all interactive elements on the page.
+#### Project Setup:
+- Download the project and read the README.md file for further details and setup instructions.
 
 ## Installation
 
