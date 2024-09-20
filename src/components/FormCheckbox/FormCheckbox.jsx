@@ -16,7 +16,7 @@ export const FormCheckbox = ({ children, ...props }) => {
               type="checkbox"
               {...field}
           />
-          <label htmlFor={field.name}>
+          <label htmlFor={field.name} className={css.checkboxLabel}>
         <span className={css.checkboxMark}>
           {field.checked ? <IconCheckboxChecked/> : <IconCheckboxUnchecked />}
         </span>

@@ -28,8 +28,10 @@
     border-radius: 8px;
     transition: var(--animation);
 
-    &:hover {
+    &:hover,
+    &:focus {
         border-color: var(--color-green-600);
+        color: var(--color-green-600);
         cursor: pointer;
     }
 }
@@ -56,10 +58,8 @@
 .radioItem {
     padding-bottom: 16px;
 
-    @media (--tablet-bp) {
-        padding-bottom: 0;
-        gap: 16px;
-        flex-basis: calc((100% - 32px) / 2);
+    &:focus-within .inputText {
+        outline: 2px solid var(--color-grey-900);
     }
 
     &:last-child {
@@ -67,6 +67,12 @@
         @media (--tablet-bp) {
             padding: 0;
         }
+    }
+
+    @media (--tablet-bp) {
+        padding-bottom: 0;
+        gap: 16px;
+        flex-basis: calc((100% - 32px) / 2);
     }
 }
 

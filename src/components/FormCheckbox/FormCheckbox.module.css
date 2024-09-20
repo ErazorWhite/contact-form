@@ -2,15 +2,8 @@
     display: flex;
     padding-bottom: 40px;
 
-    & label {
-        word-wrap: break-word;
-        display: flex;
-        gap: 16px;
-        overflow-wrap: break-word;
-
-        &:hover {
-            cursor: pointer;
-        }
+    &:focus-within .checkboxMark {
+        outline: 2px solid var(--color-grey-900);
     }
 
 }
@@ -19,4 +12,16 @@
     width: 24px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+}
+
+.checkboxLabel {
+    word-wrap: break-word;
+    display: flex;
+    gap: 16px;
+    overflow-wrap: break-word;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
