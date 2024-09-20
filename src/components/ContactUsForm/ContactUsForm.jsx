@@ -24,18 +24,18 @@ export const ContactUsForm = () => {
         validationSchema={Yup.object({
           firstName: Yup.string()
             .max(15, 'Must be 15 characters or less')
-            .required('Required'),
+            .required('This field is required'),
           lastName: Yup.string()
             .max(20, 'Must be 20 characters or less')
-            .required('Required'),
+            .required('This field is required'),
           email: Yup.string()
             .email('Invalid email address')
-            .required('Required'),
-          queryType: Yup.string().required('Required'),
-          message: Yup.string().required('Required'),
+            .required('This field is required'),
+          queryType: Yup.string().required('Please select a query type'),
+          message: Yup.string().required('This field is required'),
           acceptedTerms: Yup.boolean()
             .required('Required')
-            .oneOf([true], 'You must accept the terms and conditions.'),
+            .oneOf([true], 'To submit this form, please consent to being contacted'),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -45,23 +45,12 @@ export const ContactUsForm = () => {
         }}
       >
         <Form>
-          <FormTextInput
-            label="First Name"
-            name="firstName"
-            type="text"
-          />
+          <div className={css.textInputThumb}>
+            <FormTextInput label="First Name" name="firstName" type="text" />
+            <FormTextInput label="Last Name" name="lastName" type="text" />
+          </div>
 
-          <FormTextInput
-            label="Last Name"
-            name="lastName"
-            type="text"
-          />
-
-          <FormTextInput
-            label="Email"
-            name="email"
-            type="email"
-          />
+          <FormTextInput label="Email" name="email" type="email" />
 
           <FormRadioGroup
             groupName="Query Type"

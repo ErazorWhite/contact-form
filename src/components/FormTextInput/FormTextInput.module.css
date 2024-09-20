@@ -1,5 +1,6 @@
 .inputThumb {
     padding-bottom: 24px;
+    flex: 1;
 }
 
 .labelThumb {
@@ -35,4 +36,8 @@
         border-color: var(--color-green-600);
         transition: var(--animation);
     }
+}
+
+.inputError {
+    border-color: var(--color-error);
 }

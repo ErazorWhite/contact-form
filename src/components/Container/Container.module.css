@@ -5,17 +5,13 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-}
 
-@media (--tablet-bp) {
-    .container {
+    @media (--tablet-bp) {
         max-width: 768px;
         padding: 0 32px;
     }
 }
 
 @media (--desktop-bp) {
-    .container {
-        max-width: 1440px;
-    }
+    max-width: 1440px;
 }

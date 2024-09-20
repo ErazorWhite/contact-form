@@ -23,6 +23,10 @@
         border-color: var(--color-green-600);
         transition: var(--animation);
     }
+
+    @media(--tablet-bp) {
+        min-height: 115px;
+    }
 }
 
 .textLabel {
@@ -31,4 +35,8 @@
         color: var(--color-green-600);
 
     }
+}
+
+.textAreaError {
+    border-color: var(--color-error);
 }

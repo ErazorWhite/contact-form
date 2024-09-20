@@ -15,7 +15,7 @@ export const FormRadioGroup = ({ groupName, options, ...props }) => {
         <span>*</span>
       </div>
 
-      <ul role="group" aria-labelledby={props.name}>
+      <ul className={css.radioList} role="group" aria-labelledby={props.name}>
         {options.map((option) => {
           const isChecked = field.value === option.value;
           return (
@@ -45,7 +45,7 @@ export const FormRadioGroup = ({ groupName, options, ...props }) => {
         })}
       </ul>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className={css.radioError}>{meta.error}</div>
       ) : null}
     </>
   );

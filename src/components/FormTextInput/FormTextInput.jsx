@@ -1,6 +1,7 @@
 import { useField } from 'formik';
 import React from 'react';
 import css from './FormTextInput.module.css';
+import clsx from "clsx";
 
 export const FormTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -13,7 +14,7 @@ export const FormTextInput = ({ label, ...props }) => {
         <span>*</span>
       </div>
 
-      <input className={css.inputText} {...field} />
+      <input className={clsx(css.inputText, meta.touched && meta.error && css.inputError)} {...field} />
 
       {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>
