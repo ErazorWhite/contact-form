@@ -22,7 +22,7 @@ export const FormRadioGroup = ({ groupName, options, ...props }) => {
             <li key={option.value} className={css.radioItem}>
               <label
                 htmlFor={option.value}
-                className={clsx(css.inputText, css.radioThumb)}
+                className={clsx(css.inputText, css.radioThumb, isChecked && css.radioHighlight)}
               >
                 <input
                   type="radio"
