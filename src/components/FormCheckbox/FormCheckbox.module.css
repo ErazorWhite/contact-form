@@ -17,6 +17,6 @@
 
 .checkboxMark {
     width: 24px;
-    display: block;
-    align-content: center;
+    display: inline-flex;
+    align-items: center;
 }
