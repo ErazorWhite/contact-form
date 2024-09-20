@@ -47,6 +47,7 @@
     font-style: normal;
     font-size: 18px;
 }
+
 @font-face {
     font-family: 'Body MD (Regular)';
     src: url('./assets/fonts/static/Karla-Regular.ttf');
@@ -54,6 +55,7 @@
     font-style: normal;
     font-size: 18px;
 }
+
 @font-face {
     font-family: 'Body SM (Regular)';
     src: url('./assets/fonts/static/Karla-Regular.ttf');
@@ -78,6 +80,7 @@
 p {
     margin: 0;
 }
+
 a {
     font-weight: 500;
     color: #646cff;
@@ -95,6 +98,10 @@ body {
     padding-top: 32px;
     min-width: 320px;
     min-height: 100vh;
+
+    @media (--tablet-bp) {
+        padding-top: 128px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
