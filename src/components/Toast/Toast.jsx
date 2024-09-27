@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconCircleCheck } from '../../assets/icons/IconCircleCheck.jsx';
+import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
 import css from './Toast.module.css';
 import toast from 'react-hot-toast';
 import clsx from 'clsx';

@@ -1,7 +1,7 @@
 import { useField } from 'formik';
 import css from './FormCheckbox.module.css';
-import { IconCheckboxUnchecked } from '../../assets/icons/IconCheckBoxUnchecked.jsx';
-import {IconCheckboxChecked} from "../../assets/icons/IconCheckboxChecked.jsx";
+import { IconCheckboxUnchecked } from '../icons/IconCheckBoxUnchecked.jsx';
+import {IconCheckboxChecked} from "../icons/IconCheckboxChecked.jsx";
 
 export const FormCheckbox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });

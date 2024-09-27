@@ -2,8 +2,8 @@ import { useField } from 'formik';
 import css from './FormRadioGroup.module.css';
 import clsx from 'clsx';
 import React from 'react';
-import { IconRadiobuttonUnchecked } from '../../assets/icons/IconRadiobuttonUnchecked.jsx';
-import { IconRadiobuttonChecked } from '../../assets/icons/IconRadiobuttonChecked.jsx';
+import { IconRadiobuttonUnchecked } from '../icons/IconRadiobuttonUnchecked.jsx';
+import { IconRadiobuttonChecked } from '../icons/IconRadiobuttonChecked.jsx';
 
 export const FormRadioGroup = ({ groupName, options, ...props }) => {
   const [field, meta] = useField({ ...props });
