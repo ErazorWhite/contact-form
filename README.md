@@ -50,16 +50,16 @@ Carefully executed styles and well-chosen color scheme makes the user happy.
 When you hover the cursor over the input fields and button, their frames will be highlighted.
 Green asterisks next to the field names indicate that they need to be filled in.
 
-![](/src/assets/img/form_empty.png)
+![](/docs/img/form_empty.png)
 
 2. As soon as the user touches any of the fields the validation of the touched field starts working.
    If the user enters incorrect data or leaves the field with an asterisk empty, the validator will highlight the input field with a red frame and add an informative description of the error.
 
-![](/src/assets/img/form_validation.png)
+![](/docs/img/form_validation.png)
 
 3. Once the user enters all the required details and clicks Submit, then he will see a custom pop-up notification that will inform them that the message has been sent.
 
-![](/src/assets/img/form_submitted.png)
+![](/docs/img/form_submitted.png)
 
 ## Technologies Used
 
