@@ -35,6 +35,11 @@ const validationSchema = Yup.object({
         ),
 })
 
+const RadioOptions = [
+    { value: 'general', label: 'General Enquiry' },
+    { value: 'support', label: 'Support Request' },
+];
+
 const handleSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
         setSubmitting(false);
@@ -54,7 +59,7 @@ export const ContactUsForm = () => {
                 onSubmit={handleSubmit}
             >
                 {(formikProps) => (
-                    <ContactUsFormFields isSubmitting={formikProps.isSubmitting} />
+                    <ContactUsFormFields isSubmitting={formikProps.isSubmitting} RadioOptions={RadioOptions}/>
                 )}
             </Formik>
         </div>

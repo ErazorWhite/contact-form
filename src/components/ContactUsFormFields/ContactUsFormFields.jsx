@@ -5,12 +5,7 @@ import { FormRadioGroup } from '../FormRadioGroup/FormRadioGroup.jsx';
 import { FormTextArea } from '../FormTextArea/FormTextArea.jsx';
 import { FormCheckbox } from '../FormCheckbox/FormCheckbox.jsx';
 
-const RadioOptions = [
-  { value: 'general', label: 'General Enquiry' },
-  { value: 'support', label: 'Support Request' },
-];
-
-export const ContactUsFormFields = ({ isSubmitting }) => {
+export const ContactUsFormFields = ({ isSubmitting, RadioOptions }) => {
   return (
     <Form>
       <div className={css.textInputThumb}>
