@@ -1,0 +1,23 @@
+@import '../../utilities/mixins/typography.css';
+
+.textInputThumb {
+    @media (--tablet-bp) {
+        display: flex;
+        gap: 16px;
+    }
+}
+
+.submitButton {
+    @mixin bodyMD_bold;
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--color-green-600);
+    color: var(--color-white);
+    border-radius: 8px;
+    transition: var(--animation);
+
+    &:hover {
+        background-color: var(--color-grey-900);
+        cursor: pointer;
+    }
+}

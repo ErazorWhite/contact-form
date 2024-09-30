@@ -1,13 +1,10 @@
 import React from 'react';
-import { Form, Formik } from 'formik';
 import css from './ContactUsForm.module.css';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { FormCheckbox } from '../FormCheckbox/FormCheckbox.jsx';
-import { FormTextInput } from '../FormTextInput/FormTextInput.jsx';
-import { FormRadioGroup } from '../FormRadioGroup/FormRadioGroup.jsx';
-import { FormTextArea } from '../FormTextArea/FormTextArea.jsx';
 import toast from 'react-hot-toast';
 import { Toast } from '../Toast/Toast.jsx';
+import {ContactUsFormFields} from "../ContactUsFormFields/ContactUsFormFields.jsx";
 
 const initialValues = {
     firstName: '',
@@ -48,50 +45,18 @@ const handleSubmit = (values, { setSubmitting }) => {
 export const ContactUsForm = () => {
 
     return (
-    <div className={css.formThumb}>
-      <h1 className={css.textHeader}>Contact Us</h1>
+        <div className={css.formThumb}>
+            <h1 className={css.textHeader}>Contact Us</h1>
 
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting }) => (
-          <Form>
-            <div className={css.textInputThumb}>
-              <FormTextInput label="First Name" name="firstName" type="text" />
-              <FormTextInput label="Last Name" name="lastName" type="text" />
-            </div>
-
-            <FormTextInput label="Email" name="email" type="email" />
-
-            <FormRadioGroup
-              groupName="Query Type"
-              name="queryType"
-              options={[
-                { value: 'general', label: 'General Enquiry' },
-                { value: 'support', label: 'Support Request' },
-              ]}
-            />
-
-            <FormTextArea id="message" name="message">
-              Message
-            </FormTextArea>
-
-            <FormCheckbox id="acceptedTerms" name="acceptedTerms">
-              I consent to being contacted by the team *
-            </FormCheckbox>
-
-            <button
-              className={css.submitButton}
-              type="submit"
-              disabled={isSubmitting}
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
             >
-              Submit
-            </button>
-          </Form>
-        )}
-      </Formik>
-    </div>
-  );
+                {(formikProps) => (
+                    <ContactUsFormFields isSubmitting={formikProps.isSubmitting} />
+                )}
+            </Formik>
+        </div>
+    );
 };
