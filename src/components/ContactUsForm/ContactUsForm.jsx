@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import { Form, Formik } from 'formik';
 import css from './ContactUsForm.module.css';
 import * as Yup from 'yup';
@@ -38,6 +38,13 @@ const validationSchema = Yup.object({
         ),
 })
 
+const handleSubmit = (values, { setSubmitting }) => {
+    setTimeout(() => {
+        setSubmitting(false);
+        toast.custom((t) => <Toast t={t} />, { duration: 4000 });
+    }, 400);
+};
+
 export const ContactUsForm = () => {
 
     return (
@@ -47,12 +54,7 @@ export const ContactUsForm = () => {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            setSubmitting(false);
-              toast.custom((t) => <Toast t={t} />, { duration: 4000 });
-          }, 400);
-        }}
+        onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
           <Form>
