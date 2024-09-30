@@ -1,11 +1,10 @@
 .checkboxThumb {
-    display: flex;
+    display: block;
     padding-bottom: 40px;
 
     &:focus-within .checkboxMark {
         outline: 2px solid var(--color-grey-900);
     }
-
 }
 
 .checkboxMark {
