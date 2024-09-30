@@ -5,40 +5,42 @@ import { FormRadioGroup } from '../FormRadioGroup/FormRadioGroup.jsx';
 import { FormTextArea } from '../FormTextArea/FormTextArea.jsx';
 import { FormCheckbox } from '../FormCheckbox/FormCheckbox.jsx';
 
+const RadioOptions = [
+  { value: 'general', label: 'General Enquiry' },
+  { value: 'support', label: 'Support Request' },
+];
+
 export const ContactUsFormFields = ({ isSubmitting }) => {
-    return (
-        <Form>
-            <div className={css.textInputThumb}>
-                <FormTextInput label="First Name" name="firstName" type="text" />
-                <FormTextInput label="Last Name" name="lastName" type="text" />
-            </div>
+  return (
+    <Form>
+      <div className={css.textInputThumb}>
+        <FormTextInput label="First Name" name="firstName" type="text" />
+        <FormTextInput label="Last Name" name="lastName" type="text" />
+      </div>
 
-            <FormTextInput label="Email" name="email" type="email" />
+      <FormTextInput label="Email" name="email" type="email" />
 
-            <FormRadioGroup
-                groupName="Query Type"
-                name="queryType"
-                options={[
-                    { value: 'general', label: 'General Enquiry' },
-                    { value: 'support', label: 'Support Request' },
-                ]}
-            />
+      <FormRadioGroup
+        groupName="Query Type"
+        name="queryType"
+        options={RadioOptions}
+      />
 
-            <FormTextArea id="message" name="message">
-                Message
-            </FormTextArea>
+      <FormTextArea id="message" name="message">
+        Message
+      </FormTextArea>
 
-            <FormCheckbox id="acceptedTerms" name="acceptedTerms">
-                I consent to being contacted by the team *
-            </FormCheckbox>
+      <FormCheckbox id="acceptedTerms" name="acceptedTerms">
+        I consent to being contacted by the team *
+      </FormCheckbox>
 
-            <button
-                className={css.submitButton}
-                type="submit"
-                disabled={isSubmitting}
-            >
-                Submit
-            </button>
-        </Form>
-    );
+      <button
+        className={css.submitButton}
+        type="submit"
+        disabled={isSubmitting}
+      >
+        Submit
+      </button>
+    </Form>
+  );
 };
