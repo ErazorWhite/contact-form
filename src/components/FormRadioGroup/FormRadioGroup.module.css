@@ -38,6 +38,7 @@
 }
 
 .radioItem {
+    flex: 1;
     padding-bottom: 16px;
 
     &:focus-within .inputText {
