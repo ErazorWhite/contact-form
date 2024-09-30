@@ -1,3 +1,5 @@
+@import '../../utilities/typography.css';
+
 .formThumb {
     background-color: var(--color-white);
     border-radius: 16px;
@@ -22,9 +24,9 @@
 }
 
 .submitButton {
+    @mixin bodyMD_bold;
     width: 100%;
     min-height: 60px;
-    font-family: 'Body MD (Bold)', 'serif';
     background-color: var(--color-green-600);
     border-radius: 8px;
     transition: var(--animation);

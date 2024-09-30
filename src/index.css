@@ -1,8 +1,9 @@
 /* Usage of modern normalize */
 @import '../node_modules/modern-normalize/modern-normalize.css';
+@import './utilities/typography.css';
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Karla-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -29,39 +30,20 @@
 
 /* Breakpoints */
 @custom-media --tablet-bp (min-width: 768px);
-
 @custom-media --desktop-bp (min-width: 1440px);
 
 @font-face {
-    font-family: 'Heading';
+    font-family: 'Karla-Bold';
     src: url('./assets/fonts/static/Karla-Bold.ttf');
     font-weight: 700;
     font-style: normal;
-    font-size: 32px;
 }
 
 @font-face {
-    font-family: 'Body MD (Bold)';
-    src: url('./assets/fonts/static/Karla-Bold.ttf');
-    font-weight: 700;
-    font-style: normal;
-    font-size: 18px;
-}
-
-@font-face {
-    font-family: 'Body MD (Regular)';
+    font-family: 'Karla-Regular';
     src: url('./assets/fonts/static/Karla-Regular.ttf');
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
-}
-
-@font-face {
-    font-family: 'Body SM (Regular)';
-    src: url('./assets/fonts/static/Karla-Regular.ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
 }
 
 .visually-hidden {
@@ -92,7 +74,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Body SM (Regular)', 'serif';
+    font-family: 'Karla-Regular', sans-serif, roboto;
     color: var(--color-grey-900);
     margin: 0;
     padding-top: 32px;
@@ -105,7 +87,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Heading', 'serif';
+    font-family: 'Karla-Bold', sans-serif, roboto;
     line-height: 1.1;
     margin: 0;
 }

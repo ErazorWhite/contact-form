@@ -1,7 +1,9 @@
+@import '../../utilities/typography.css';
+
 .labelThumb {
     display: flex;
     gap: 8px;
-    font-size: 16px;
+    @mixin bodySM;
 }
 
 .textLabel {

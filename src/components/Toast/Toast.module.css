@@ -1,3 +1,5 @@
+@import '../../utilities/typography.css';
+
 .toastThumb {
     padding: 24px;
     background-color: var(--color-grey-900);
@@ -35,15 +37,15 @@
 }
 
 .toastTitle {
+    @mixin bodyMD_bold;
     display: flex;
     align-items: center;
-    font-family: "Body MD (Bold)", serif;
     color: var(--color-white);
     padding-bottom: 8px;
 }
 
 .toastMessage {
-    font-family: "Body SM (Regular)", serif;
+    @mixin bodySM;
     color: var(--color-green-200);
 }
 

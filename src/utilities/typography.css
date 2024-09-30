@@ -1,0 +1,27 @@
+@define-mixin heading {
+    font-family: 'Karla-Bold', 'sans-serif', 'Roboto';
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1px;
+}
+
+@define-mixin bodyMD_bold {
+    font-family: 'Karla-Bold', 'sans-serif', 'Roboto';
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+@define-mixin bodyMD_regular {
+    font-family: 'Karla-Regular', 'sans-serif', 'Roboto';
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+@define-mixin bodySM {
+    font-family: 'Karla-Regular', 'sans-serif', 'Roboto';
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
