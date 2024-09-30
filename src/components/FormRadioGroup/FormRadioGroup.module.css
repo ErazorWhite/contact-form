@@ -1,4 +1,4 @@
-@import '../../utilities/typography.css';
+@import '../../utilities/mixins/typography.css';
 
 .labelThumb {
     display: flex;
@@ -24,7 +24,7 @@
     width: 100%;
     padding: 12px 24px;
 
-    background-color: inherit;
+    background-color: var(--color-white);
     color: var(--color-grey-900);
     border: 1px solid var(--color-grey-500);
     border-radius: 8px;

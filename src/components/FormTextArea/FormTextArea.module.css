@@ -1,4 +1,4 @@
-@import '../../utilities/typography.css';
+@import '../../utilities/mixins/typography.css';
 
 .textAreaThumb {
     padding-bottom: 40px;

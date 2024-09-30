@@ -1,4 +1,4 @@
-@import '../../utilities/typography.css';
+@import '../../utilities/mixins/typography.css';
 
 .toastThumb {
     padding: 24px;

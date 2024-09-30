@@ -1,6 +1,6 @@
 /* Usage of modern normalize */
 @import '../node_modules/modern-normalize/modern-normalize.css';
-@import './utilities/typography.css';
+@import 'utilities/mixins/typography.css';
 
 :root {
     font-family: Karla-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
