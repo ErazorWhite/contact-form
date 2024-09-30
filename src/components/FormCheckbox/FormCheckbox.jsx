@@ -5,8 +5,7 @@ import {IconCheckboxChecked} from "../icons/IconCheckboxChecked.jsx";
 
 export const FormCheckbox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
-  console.log(field);
-  console.log(props);
+
   return (
     <div className={css.checkboxThumb}>
       <div>
