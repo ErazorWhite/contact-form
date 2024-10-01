@@ -7,15 +7,45 @@
     align-items: center;
 }
 
-.radioHighlight {
-    background-color: var(--color-green-200);
-}
-
 .inputText {
     @mixin inputText
 
     &:hover,
     &:focus {
         color: var(--color-green-600);
+    }
+}
+
+.customRadioButton {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-grey-500);
+    border-radius: 50%;
+}
+
+.radioInput {
+    &:checked + .radioThumb {
+        background-color: var(--color-green-200);
+
+        .customRadioButton {
+            border-color: var(--color-green-600);
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 11px;
+                height: 11px;
+                background-color: var(--color-green-600);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &:focus + .radioThumb .customRadioButton {
+        outline: 2px solid black;
     }
 }
