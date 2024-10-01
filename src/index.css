@@ -1,9 +1,8 @@
 /* Usage of modern normalize */
 @import '../node_modules/modern-normalize/modern-normalize.css';
-@import 'utilities/mixins/typography.css';
 
 :root {
-    font-family: Karla-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -74,7 +73,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Karla-Regular', sans-serif, roboto;
+    font-family: 'Karla', sans-serif, roboto;
     color: var(--color-grey-900);
     margin: 0;
     padding-top: 32px;
@@ -118,5 +117,5 @@ ul {
 
 .error {
     color: var(--color-error);
-    padding-top: 8px;
+    margin-top: 8px;
 }
