@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import css from '../FormRadioGroup/FormRadioGroup.module.css';
+import css from './FormRadioButton.module.css';
 import { IconRadiobuttonChecked } from '../icons/IconRadiobuttonChecked.jsx';
 import { IconRadiobuttonUnchecked } from '../icons/IconRadiobuttonUnchecked.jsx';
 import React from 'react';

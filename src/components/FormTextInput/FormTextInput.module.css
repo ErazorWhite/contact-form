@@ -2,7 +2,7 @@
 @import '../../utilities/mixins/commonStyles.css';
 
 .inputThumb {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
     flex: 1;
 }
 

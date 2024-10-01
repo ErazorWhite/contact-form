@@ -1,0 +1,21 @@
+@import '../../utilities/mixins/typography.css';
+@import '../../utilities/mixins/commonStyles.css';
+
+.radioThumb {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.radioHighlight {
+    background-color: var(--color-green-200);
+}
+
+.inputText {
+    @mixin inputText
+
+    &:hover,
+    &:focus {
+        color: var(--color-green-600);
+    }
+}
