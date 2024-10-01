@@ -9,11 +9,6 @@
     @mixin bodySM;
 }
 
-.labelThumb {
-    order: 1;
-    @mixin labelThumb
-}
-
 .textLabel {
     @mixin textLabel
 }

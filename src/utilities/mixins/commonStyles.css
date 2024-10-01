@@ -1,9 +1,3 @@
-@define-mixin labelThumb {
-    display: flex;
-    gap: 8px;
-    @mixin bodySM;
-}
-
 @define-mixin textLabel {
     margin-bottom: 8px;
 

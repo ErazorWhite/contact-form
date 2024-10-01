@@ -2,7 +2,9 @@
 @import '../../utilities/mixins/commonStyles.css';
 
 .labelThumb {
-    @mixin labelThumb
+    display: flex;
+    gap: 8px;
+    @mixin bodySM;
 }
 
 .textLabel {
