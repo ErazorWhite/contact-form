@@ -25,7 +25,7 @@
     --color-error: #D73C3C; /* Red (Errors) */
 
     /* Animation */
-    --animation: 150ms ease-in;
+    --animation: color 150ms ease-in, background-color 150ms ease-in;
 }
 
 /* Breakpoints */
