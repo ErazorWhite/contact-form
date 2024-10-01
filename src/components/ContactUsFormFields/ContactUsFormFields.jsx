@@ -9,11 +9,11 @@ export const ContactUsFormFields = ({ isSubmitting, RadioOptions }) => {
   return (
     <Form>
       <div className={css.textInputThumb}>
-        <FormTextInput label="First Name" name="firstName" type="text" />
-        <FormTextInput label="Last Name" name="lastName" type="text" />
+        <FormTextInput label="First Name" name="firstName" type="text" required/>
+        <FormTextInput label="Last Name" name="lastName" type="text" required/>
       </div>
 
-      <FormTextInput label="Email" name="email" type="email" />
+      <FormTextInput label="Email address" name="email" type="email" required/>
 
       <FormRadioGroup
         groupName="Query Type"
@@ -21,12 +21,12 @@ export const ContactUsFormFields = ({ isSubmitting, RadioOptions }) => {
         options={RadioOptions}
       />
 
-      <FormTextArea id="message" name="message">
+      <FormTextArea id="message" name="message" required>
         Message
       </FormTextArea>
 
-      <FormCheckbox id="acceptedTerms" name="acceptedTerms">
-        I consent to being contacted by the team *
+      <FormCheckbox id="acceptedTerms" name="acceptedTerms" required>
+        I consent to being contacted by the team
       </FormCheckbox>
 
       <button

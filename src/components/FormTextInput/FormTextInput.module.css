@@ -2,11 +2,15 @@
 @import '../../utilities/mixins/commonStyles.css';
 
 .inputThumb {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 24px;
     flex: 1;
+    @mixin bodySM;
 }
 
 .labelThumb {
+    order: 1;
     @mixin labelThumb
 }
 
@@ -15,9 +19,15 @@
 }
 
 .inputText {
+    order: 2;
     @mixin inputText
 }
 
 .inputError {
     border-color: var(--color-error);
 }
+
+.errorOrder {
+    order: 3;
+}
+

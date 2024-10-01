@@ -5,7 +5,7 @@
 }
 
 @define-mixin textLabel {
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 
     & + span {
         color: var(--color-green-600);
@@ -32,5 +32,11 @@
     &:focus {
         border-color: var(--color-green-600);
         cursor: pointer;
+    }
+
+    &:required + .textLabel::after {
+        content: ' *';
+        display: inline;
+        color: var(--color-green-600);
     }
 }

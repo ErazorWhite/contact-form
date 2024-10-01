@@ -1,16 +1,13 @@
 @import '../../utilities/mixins/typography.css';
 
 .textAreaThumb {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 40px;
 }
 
-.labelThumb {
-    display: flex;
-    gap: 8px;
-    @mixin bodySM;
-}
-
 .textArea {
+    order: 2;
     resize: none;
     min-height: 240px;
     width: 100%;
@@ -21,10 +18,17 @@
     border: 1px solid var(--color-grey-500);
     border-radius: 8px;
     transition: var(--animation);
+    @mixin bodyMD_regular;
 
     &:hover {
         border-color: var(--color-green-600);
         cursor: pointer;
+    }
+
+    &:required + .textLabel::after {
+        content: ' *';
+        display: inline;
+        color: var(--color-green-600);
     }
 
     @media (--tablet-bp) {
@@ -33,14 +37,16 @@
 }
 
 .textLabel {
-    padding-bottom: 8px;
-
-    & + span {
-        color: var(--color-green-600);
-
-    }
+    display: block;
+    margin-bottom: 8px;
+    order: 1;
+    @mixin bodySM;
 }
 
 .textAreaError {
     border-color: var(--color-error);
+}
+
+.errorOrder {
+    order: 3;
 }
