@@ -5,7 +5,7 @@ import { IconCheckboxChecked } from '../icons/IconCheckboxChecked.jsx';
 import { useId } from 'react';
 import clsx from "clsx";
 
-export const FormCheckbox = ({ children, required, ...props }) => {
+export const FormCheckbox = ({ label, required, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   const id = useId(); // Генерируем уникальный идентификатор
 
@@ -23,7 +23,7 @@ export const FormCheckbox = ({ children, required, ...props }) => {
         <span className={css.checkboxMark}>
           {field.checked ? <IconCheckboxChecked /> : <IconCheckboxUnchecked />}
         </span>
-        <p className={css.checkboxText}>{children}</p>
+        <p className={css.checkboxText}>{label}</p>
       </label>
       {meta.touched && meta.error ? (
         <div className="error">{meta.error}</div>
