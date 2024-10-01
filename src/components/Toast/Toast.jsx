@@ -1,7 +1,6 @@
 import React from 'react';
 import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
 import css from './Toast.module.css';
-import toast from 'react-hot-toast';
 import clsx from 'clsx';
 
 export const Toast = ({ t }) => {
