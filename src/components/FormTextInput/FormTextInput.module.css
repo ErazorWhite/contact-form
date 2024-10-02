@@ -1,5 +1,4 @@
 @import '../../utilities/mixins/typography.css';
-@import '../../utilities/mixins/commonStyles.css';
 
 .inputThumb {
     display: flex;
@@ -9,13 +8,8 @@
     @mixin bodySM;
 }
 
-.textLabel {
-    @mixin textLabel
-}
-
-.inputText {
+.inputTextOrder {
     order: 2;
-    @mixin inputText
 }
 
 .errorOrder {

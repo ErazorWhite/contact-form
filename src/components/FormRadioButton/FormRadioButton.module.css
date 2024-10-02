@@ -1,5 +1,4 @@
 @import '../../utilities/mixins/typography.css';
-@import '../../utilities/mixins/commonStyles.css';
 
 .radioThumb {
     display: flex;
@@ -7,8 +6,7 @@
     align-items: center;
 }
 
-.inputText {
-    @mixin inputText
+.labelAction {
 
     &:hover,
     &:focus {

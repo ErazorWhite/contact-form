@@ -1,14 +1,9 @@
 @import '../../utilities/mixins/typography.css';
-@import '../../utilities/mixins/commonStyles.css';
 
 .labelThumb {
     display: flex;
     gap: 8px;
     @mixin bodySM;
-}
-
-.textLabel {
-    @mixin textLabel
 }
 
 .required::after {

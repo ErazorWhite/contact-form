@@ -7,7 +7,7 @@ export const FormTextInput = ({ label, required, isTextArea, ...props }) => {
   const [field, meta] = useField(props);
   const id = useId();
   return (
-    <div className={clsx(css.inputThumb, isTextArea && css.textAreaMargin )}>
+    <div className={clsx(css.inputThumb, isTextArea && css.textAreaMargin)}>
       {isTextArea ? (
         <textarea
           id={id}
@@ -21,15 +21,15 @@ export const FormTextInput = ({ label, required, isTextArea, ...props }) => {
       ) : (
         <input
           id={id}
-          className={clsx(
-            css.inputText,
+          className={clsx('inputText',
+            css.inputTextOrder,
             meta.touched && meta.error && css.inputError
           )}
           {...field}
           required={required}
         />
       )}
-      <label className={css.textLabel} htmlFor={id}>
+      <label className={'textLabel'} htmlFor={id}>
         {label}
       </label>
 

@@ -18,7 +18,7 @@ export const FormRadioButton = (props) => {
         required={props.required}
       />
 
-      <label htmlFor={id} className={clsx(css.inputText, css.radioThumb)}>
+      <label htmlFor={id} className={clsx('inputText', css.labelAction, css.radioThumb)}>
         <span className={css.customRadioButton} />
         {props.option.label}
       </label>

@@ -9,7 +9,7 @@ export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
 
   return (
     <>
-      <legend className={clsx(css.textLabel, required && css.required)}>
+      <legend className={clsx('textLabel', required && css.required)}>
         {groupName}
       </legend>
       <ul className={css.radioList} role="group" aria-labelledby={props.name}>
