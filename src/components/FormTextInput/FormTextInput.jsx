@@ -3,18 +3,24 @@ import React, { useId } from 'react';
 import css from './FormTextInput.module.css';
 import clsx from 'clsx';
 
-export const FormTextInput = ({ label, required, isTextArea, ...props }) => {
+export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
   const [field, meta] = useField(props);
-  const [Component, className] = isTextArea
+  const [Component, className] = isMultiLine
     ? ['textarea', css.textArea]
     : ['input', ['inputText', css.inputTextOrder]];
 
   const id = useId();
   return (
-
-    <div className={clsx(css.inputThumb, isTextArea && css.textAreaMargin)}>
-
-        <Component id={id} className={clsx(className, meta.touched && meta.error && css.inputError)} required={required} {...field} />
+    <div className={clsx(css.inputThumb, isMultiLine && css.textAreaMargin)}>
+      <Component
+        id={id}
+        className={clsx(
+          className,
+          meta.touched && meta.error && css.inputError
+        )}
+        required={required}
+        {...field}
+      />
 
       <label className={'textLabel'} htmlFor={id}>
         {label}
