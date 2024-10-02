@@ -5,30 +5,17 @@ import clsx from 'clsx';
 
 export const FormTextInput = ({ label, required, isTextArea, ...props }) => {
   const [field, meta] = useField(props);
+  const [Component, className] = isTextArea
+    ? ['textarea', css.textArea]
+    : ['input', ['inputText', css.inputTextOrder]];
+
   const id = useId();
   return (
+
     <div className={clsx(css.inputThumb, isTextArea && css.textAreaMargin)}>
-      {isTextArea ? (
-        <textarea
-          id={id}
-          className={clsx(
-            css.textArea,
-            meta.touched && meta.error && css.inputError
-          )}
-          required={required}
-          {...field}
-        />
-      ) : (
-        <input
-          id={id}
-          className={clsx('inputText',
-            css.inputTextOrder,
-            meta.touched && meta.error && css.inputError
-          )}
-          {...field}
-          required={required}
-        />
-      )}
+
+        <Component id={id} className={clsx(className, meta.touched && meta.error && css.inputError)} required={required} {...field} />
+
       <label className={'textLabel'} htmlFor={id}>
         {label}
       </label>
