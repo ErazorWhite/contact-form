@@ -11,9 +11,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      cssnano:
-        specifier: ^7.0.6
-        version: 7.0.6(postcss@8.4.47)
       formik:
         specifier: ^2.4.6
         version: 2.4.6(react@18.3.1)
@@ -48,6 +45,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.2(vite@5.4.8(sugarss@4.0.1(postcss@8.4.47)))
+      cssnano:
+        specifier: ^7.0.6
+        version: 7.0.6(postcss@8.4.47)
       eslint:
         specifier: ^9.9.0
         version: 9.11.1
