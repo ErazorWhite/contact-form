@@ -1,5 +1,17 @@
 @import '../../utilities/mixins/typography.css';
 
+.toasterContainer {
+    position: fixed;
+    display: flex;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 9999;
+}
+
 .toastThumb {
     padding: 24px;
     background-color: var(--color-grey-900);

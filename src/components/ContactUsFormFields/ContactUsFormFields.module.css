@@ -15,9 +15,11 @@
     color: var(--color-white);
     border-radius: 8px;
     transition: var(--animation);
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:disabled {
         background-color: var(--color-grey-900);
-        cursor: pointer;
     }
+
 }

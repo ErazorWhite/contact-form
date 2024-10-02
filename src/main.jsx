@@ -2,13 +2,13 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { ContactUsForm } from './components/ContactUsForm/ContactUsForm.jsx';
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from './components/Toaster/Toaster.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Toaster />
     <div className="container">
-      <ContactUsForm/>
+      <Toaster />
+      <ContactUsForm />
     </div>
   </StrictMode>
 );
