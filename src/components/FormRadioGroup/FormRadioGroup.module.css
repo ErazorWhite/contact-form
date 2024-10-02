@@ -3,7 +3,7 @@
 .labelThumb {
     display: flex;
     gap: 8px;
-    @mixin bodySM;
+    @mixin bodySmall;
 }
 
 .required::after {

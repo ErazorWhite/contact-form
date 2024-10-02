@@ -5,7 +5,7 @@
     flex-direction: column;
     margin-bottom: 24px;
     flex: 1;
-    @mixin bodySM;
+    @mixin bodySmall;
 }
 
 .inputTextOrder {
@@ -28,7 +28,7 @@
     border: 1px solid var(--color-grey-500);
     border-radius: 8px;
     transition: var(--animation);
-    @mixin bodyMD_regular;
+    @mixin bodyMediumRegular;
 
     &:hover {
         border-color: var(--color-green-600);
