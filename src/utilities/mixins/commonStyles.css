@@ -1,10 +1,6 @@
 @define-mixin textLabel {
     margin-bottom: 8px;
 
-    & + span {
-        color: var(--color-green-600);
-    }
-
     &:last-child {
         padding: 0;
     }

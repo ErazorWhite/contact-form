@@ -11,6 +11,12 @@
     @mixin textLabel
 }
 
+.required::after {
+    content: ' *';
+    display: inline;
+    color: var(--color-green-600);
+}
+
 .radioList {
     @media (--tablet-bp) {
         display: flex;

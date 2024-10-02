@@ -15,7 +15,7 @@ export const ContactUsFormFields = ({ isSubmitting, RadioOptions }) => {
 
           <FormTextInput label="Email address" name="email" type="email" required/>
 
-          <FormRadioGroup groupName="Query Type" name="queryType" options={RadioOptions}/>
+          <FormRadioGroup groupName="Query Type" name="queryType" options={RadioOptions} required/>
 
           <FormTextInput label="Message" id="message" name="message" required isTextArea/>
 

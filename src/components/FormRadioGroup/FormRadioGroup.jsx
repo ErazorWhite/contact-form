@@ -2,15 +2,15 @@ import { useField } from 'formik';
 import css from './FormRadioGroup.module.css';
 import React from 'react';
 import {FormRadioButton} from "../FormRadioButton/FormRadioButton.jsx";
+import clsx from "clsx";
 
-export const FormRadioGroup = ({ groupName, options, ...props }) => {
+export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
   const [field, meta] = useField({ ...props });
 
   return (
     <>
       <div className={css.labelThumb}>
-        <div className={css.textLabel}>{groupName}</div>
-        <span>*</span>
+        <div className={clsx(css.textLabel, required && css.required)}>{groupName}</div>
       </div>
 
       <ul className={css.radioList} role="group" aria-labelledby={props.name}>
