@@ -8,23 +8,18 @@ export const FormRadioButton = (props) => {
     <>
       <input
         type="radio"
-        className={clsx("visually-hidden", css.radioInput)}
+        className={clsx('visually-hidden', css.radioInput)}
         id={id}
         name={props.field.name}
         value={props.option.value}
         onChange={props.field.onChange}
         onBlur={props.field.onBlur}
+        checked={props.field.value === props.option.value}
+        required={props.required}
       />
 
-      <label
-        htmlFor={id}
-        className={clsx(
-          css.inputText,
-          css.radioThumb,
-        )}
-      >
-        <span className={css.customRadioButton}/>
-
+      <label htmlFor={id} className={clsx(css.inputText, css.radioThumb)}>
+        <span className={css.customRadioButton} />
         {props.option.label}
       </label>
     </>
