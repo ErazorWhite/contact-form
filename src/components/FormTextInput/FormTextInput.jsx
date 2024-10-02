@@ -8,6 +8,7 @@ export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
   const [Component, className] = isMultiLine
     ? ['textarea', css.textArea]
     : ['input', ['inputText', css.inputTextOrder]];
+  const isTouchedError = meta.touched && meta.error;
 
   const id = useId();
   return (
@@ -16,7 +17,7 @@ export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
         id={id}
         className={clsx(
           className,
-          meta.touched && meta.error && css.inputError
+          isTouchedError && css.inputError
         )}
         required={required}
         {...field}
@@ -26,7 +27,7 @@ export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
         {label}
       </label>
 
-      {meta.touched && meta.error ? (
+      {isTouchedError ? (
         <div className={clsx('error', css.errorOrder)}>{meta.error}</div>
       ) : null}
     </div>
