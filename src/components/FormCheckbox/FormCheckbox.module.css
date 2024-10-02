@@ -10,6 +10,7 @@
 .checkboxMark {
     margin: 0 16px 0 0;
     display: inline-flex;
+    fill: var(--color-grey-500);
 }
 
 .checkboxLabel {
@@ -23,8 +24,14 @@
 
 }
 
-.checkboxInput:required + .checkboxLabel .checkboxText::after {
-    content: ' *';
-    display: inline;
-    color: var(--color-green-600);
+.checkboxInput {
+    &:required + .checkboxLabel .checkboxText::after {
+        content: ' *';
+        display: inline;
+        color: var(--color-green-600);
+    }
+
+    &:checked + .checkboxLabel .checkboxMark {
+        fill: var(--color-green-600);
+    }
 }
