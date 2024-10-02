@@ -25,7 +25,7 @@
 }
 
 .radioInput {
-    &:checked + .radioThumb {
+    &:checked ~ .radioThumb {
         background-color: var(--color-green-200);
 
         .customRadioButton {
@@ -45,7 +45,7 @@
         }
     }
 
-    &:focus + .radioThumb .customRadioButton {
+    &:focus ~ .radioThumb .customRadioButton {
         outline: 2px solid black;
     }
 }

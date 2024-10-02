@@ -24,7 +24,7 @@
         cursor: pointer;
     }
 
-    &:required + .textLabel::after {
+    &:required ~ .textLabel::after {
         content: ' *';
         display: inline;
         color: var(--color-green-600);

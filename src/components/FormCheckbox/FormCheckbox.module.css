@@ -25,13 +25,13 @@
 }
 
 .checkboxInput {
-    &:required + .checkboxLabel .checkboxText::after {
+    &:required ~ .checkboxLabel .checkboxText::after {
         content: ' *';
         display: inline;
         color: var(--color-green-600);
     }
 
-    &:checked + .checkboxLabel .checkboxMark {
+    &:checked ~ .checkboxLabel .checkboxMark {
         fill: var(--color-green-600);
     }
 }
