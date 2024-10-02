@@ -7,7 +7,7 @@ export const FormTextInput = ({ label, required, isTextArea, ...props }) => {
   const [field, meta] = useField(props);
   const id = useId();
   return (
-    <div className={css.inputThumb}>
+    <div className={clsx(css.inputThumb, isTextArea && css.textAreaMargin )}>
       {isTextArea ? (
         <textarea
           id={id}

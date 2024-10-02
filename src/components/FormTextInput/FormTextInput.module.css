@@ -52,6 +52,10 @@
     }
 }
 
+.textAreaMargin {
+    margin-bottom: 40px;
+}
+
 .inputError {
     border-color: var(--color-error);
 }
