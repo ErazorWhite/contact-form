@@ -36,14 +36,10 @@ export const ContactUsForm = () => {
         initialValues={initialValues}
         validationSchema={contactUsFormValidationSchema}
         onSubmit={handleSubmit}
-      >
-        {(formikProps) => (
-          <ContactUsFormFields
-            isSubmitting={formikProps.isSubmitting}
-            RadioOptions={RadioOptions}
-          />
+        children={(props) => (
+          <ContactUsFormFields RadioOptions={RadioOptions} {...props} />
         )}
-      </Formik>
+      />
     </div>
   );
 };
