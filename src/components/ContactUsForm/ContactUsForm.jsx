@@ -21,7 +21,7 @@ const RadioOptions = [
 
 const handleSubmit = (values, { setSubmitting, resetForm }) => {
   setTimeout(() => {
-    notify('Form submitted successfully!', 'success');
+    notify('Message sent!', 'Thanks for completing the form. We’ll be in touch soon!');
     resetForm();
     setSubmitting(false);
   }, 750);

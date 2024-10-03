@@ -1,12 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Toast } from './Toast';
 import css from './Toaster.module.css';
-import {nanoid} from "nanoid";
+import { nanoid } from 'nanoid';
 
 let notifyHandlers = [];
 
-export const notify = (message, type = 'info', duration = 5000) => {
-  notifyHandlers.forEach((handler) => handler({ message, type, duration }));
+export const notify = (
+  headMessage,
+  bodyMessage,
+  type = 'info',
+  duration = 5000
+) => {
+  notifyHandlers.forEach((handler) =>
+    handler({ headMessage, bodyMessage, type, duration })
+  );
 };
 
 export const Toaster = () => {
@@ -19,9 +26,7 @@ export const Toaster = () => {
 
       setTimeout(() => {
         setToasts((prev) =>
-            prev.map((t) =>
-                t.id === id ? { ...t, visible: false } : t
-            )
+          prev.map((t) => (t.id === id ? { ...t, visible: false } : t))
         );
       }, toast.duration - 500);
 
@@ -38,10 +43,15 @@ export const Toaster = () => {
   }, []);
 
   return (
-      <div className={css.toasterContainer}>
-        {toasts.map((toast) => (
-            <Toast key={toast.id} t={toast}/>
-        ))}
-      </div>
+    <div className={css.toasterContainer}>
+      {toasts.map((toast) => (
+        <Toast
+          key={toast.id}
+          headMessage={toast.headMessage}
+          bodyMessage={toast.bodyMessage}
+          t={toast}
+        />
+      ))}
+    </div>
   );
 };

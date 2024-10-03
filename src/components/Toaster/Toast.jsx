@@ -3,7 +3,7 @@ import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
 import css from './Toaster.module.css';
 import clsx from 'clsx';
 
-export const Toast = ({ t }) => {
+export const Toast = ({ headMessage = 'Done', bodyMessage, t }) => {
   return (
     <div
       className={clsx(
@@ -15,11 +15,13 @@ export const Toast = ({ t }) => {
         <span className={css.iconWrapper}>
           <IconCircleCheck />
         </span>
-        Message Sent!
+        {headMessage}
       </p>
-      <p className={css.toastMessage}>
-        Thanks for completing the form. We’ll be in touch soon!
-      </p>
+      {bodyMessage && (
+        <p className={css.toastMessage}>
+          {bodyMessage}
+        </p>
+      )}
     </div>
   );
 };
