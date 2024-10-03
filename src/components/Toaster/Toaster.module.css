@@ -1,5 +1,11 @@
 @import '../../utilities/mixins/typography.css';
 
+.toastThumb {
+    padding: 24px;
+    background-color: var(--color-grey-900);
+    border-radius: 12px;
+}
+
 .toasterContainer {
     position: fixed;
     display: flex;
@@ -12,10 +18,24 @@
     z-index: 9999;
 }
 
-.toastThumb {
-    padding: 24px;
-    background-color: var(--color-grey-900);
-    border-radius: 12px;
+.toastTitle {
+    @mixin bodyMediumBold;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    padding-bottom: 8px;
+}
+
+.toastMessage {
+    @mixin bodySmall;
+    color: var(--color-green-200);
+}
+
+.iconWrapper {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px 0 0;
+    fill: currentColor;
 }
 
 .animateEnter {
@@ -46,24 +66,4 @@
         opacity: 0;
         transform: translateY(-20px);
     }
-}
-
-.toastTitle {
-    @mixin bodyMediumBold;
-    display: flex;
-    align-items: center;
-    color: var(--color-white);
-    padding-bottom: 8px;
-}
-
-.toastMessage {
-    @mixin bodySmall;
-    color: var(--color-green-200);
-}
-
-.iconWrapper {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 8px 0 0;
-    fill: currentColor;
 }

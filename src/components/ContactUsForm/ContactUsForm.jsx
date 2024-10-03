@@ -2,8 +2,9 @@ import React from 'react';
 import css from './ContactUsForm.module.css';
 import { Formik } from 'formik';
 import { ContactUsFormFields } from '../ContactUsFormFields/ContactUsFormFields.jsx';
-import { notify } from '../Toaster/Toaster.jsx';
 import { contactUsFormValidationSchema } from '../../utilities/validationSchemas.js';
+import {notifyExternally} from "../Toaster/NotificationContext.jsx";
+
 
 const initialValues = {
   firstName: '',
@@ -21,7 +22,7 @@ const RadioOptions = [
 
 const handleSubmit = (values, { setSubmitting, resetForm }) => {
   setTimeout(() => {
-    notify('Message sent!', 'Thanks for completing the form. We’ll be in touch soon!');
+    notifyExternally('Message sent!', 'Thanks for completing the form. We’ll be in touch soon!');
     resetForm();
     setSubmitting(false);
   }, 750);
