@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
 import css from './Toaster.module.css';
 import clsx from 'clsx';
@@ -6,7 +6,8 @@ import clsx from 'clsx';
 export const Toast = ({
   headMessage = 'Done',
   bodyMessage,
-  toast: { duration, id },
+  duration,
+  id,
   onClose,
 }) => {
   const [visible, setVisible] = useState(true);

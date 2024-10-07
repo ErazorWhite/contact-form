@@ -8,12 +8,12 @@ export const Toaster = () => {
 
   return (
     <div className={css.toasterContainer}>
-      {toasts.map((toast) => (
+      {toasts.map(({headMessage, bodyMessage, duration, id}) => (
         <Toast
-          key={toast.id}
-          headMessage={toast.headMessage}
-          bodyMessage={toast.bodyMessage}
-          toast={toast}
+          key={id}
+          headMessage={headMessage}
+          bodyMessage={bodyMessage}
+          duration={duration}
           onClose={removeToast}
         />
       ))}
