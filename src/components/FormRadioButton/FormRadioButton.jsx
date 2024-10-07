@@ -13,7 +13,7 @@ export const FormRadioButton = (props) => {
         name={props.field.name}
         value={props.option.value}
         onChange={props.field.onChange}
-        onBlur={props.field.onBlur}gi
+        onBlur={props.field.onBlur}
         checked={props.field.value === props.option.value}
         required={props.required}
       />
