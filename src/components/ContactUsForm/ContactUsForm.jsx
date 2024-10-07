@@ -3,8 +3,7 @@ import css from './ContactUsForm.module.css';
 import { Formik } from 'formik';
 import { ContactUsFormFields } from '../ContactUsFormFields/ContactUsFormFields.jsx';
 import { contactUsFormValidationSchema } from '../../utilities/validationSchemas.js';
-import {notifyExternally} from "../Toaster/NotificationContext.jsx";
-
+import { notifyExternally } from '../Toaster/NotificationContext.jsx';
 
 const initialValues = {
   firstName: '',
@@ -17,7 +16,10 @@ const initialValues = {
 
 const handleSubmit = (values, { setSubmitting, resetForm }) => {
   setTimeout(() => {
-    notifyExternally('Message sent!', 'Thanks for completing the form. We’ll be in touch soon!');
+    notifyExternally(
+      'Message sent!',
+      'Thanks for completing the form. We’ll be in touch soon!'
+    );
     resetForm();
     setSubmitting(false);
   }, 750);
@@ -32,9 +34,7 @@ export const ContactUsForm = () => {
         initialValues={initialValues}
         validationSchema={contactUsFormValidationSchema}
         onSubmit={handleSubmit}
-        children={(props) => (
-          <ContactUsFormFields {...props} />
-        )}
+        component={ContactUsFormFields}
       />
     </div>
   );
