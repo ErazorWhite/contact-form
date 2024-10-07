@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
 import css from './Toaster.module.css';
 import clsx from 'clsx';
@@ -19,11 +19,11 @@ export const Toast = ({
     return () => clearTimeout(timer);
   }, [duration]);
 
-  const handleAnimationEnd = () => {
+  const handleAnimationEnd = useCallback(() => {
     if (!visible) {
       onClose(id);
     }
-  };
+  }, [visible, onClose, id]);
 
   return (
     <div
@@ -33,12 +33,12 @@ export const Toast = ({
       )}
       onAnimationEnd={handleAnimationEnd}
     >
-      <p className={css.toastTitle}>
+      <h2 className={css.toastTitle}>
         <span className={css.iconWrapper}>
           <IconCircleCheck />
         </span>
         {headMessage}
-      </p>
+      </h2>
       {bodyMessage && <p className={css.toastMessage}>{bodyMessage}</p>}
     </div>
   );
