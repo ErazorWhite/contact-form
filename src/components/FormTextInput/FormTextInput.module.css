@@ -1,4 +1,4 @@
-@import '../../utilities/mixins/typography.css';
+@import '../../utilities/styling/mixins/typography.css';
 
 .inputThumb {
     display: flex;
