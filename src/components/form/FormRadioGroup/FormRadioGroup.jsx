@@ -1,6 +1,5 @@
 import { useField } from 'formik';
 import css from './FormRadioGroup.module.css';
-import React from 'react';
 import { FormRadioButton } from '../FormRadioButton/FormRadioButton.jsx';
 import clsx from 'clsx';
 

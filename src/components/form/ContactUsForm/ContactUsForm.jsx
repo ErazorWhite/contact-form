@@ -1,9 +1,8 @@
-import React from 'react';
 import css from './ContactUsForm.module.css';
 import { Formik } from 'formik';
 import { ContactUsFormFields } from '../ContactUsFormFields/ContactUsFormFields.jsx';
-import { contactUsFormValidationSchema } from '../../utilities/validationSchemas.js';
-import { notifyExternally } from '../../utilities/notifications';
+import { contactUsFormValidationSchema } from '../../../utilities/validationSchemas.js';
+import { notifyExternally } from '../../../utilities/notifications/index.js';
 
 const initialValues = {
   firstName: '',

@@ -1,4 +1,4 @@
-@import 'mixins/typography.css';
+@import '../../../utilities/styling/mixins/typography.css';
 
 .textLabel {
     margin-bottom: 8px;

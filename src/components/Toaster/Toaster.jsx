@@ -1,4 +1,3 @@
-import React from 'react';
 import { Toast } from './Toast';
 import css from './Toaster.module.css';
 import { useNotifications } from '../../utilities/notifications';

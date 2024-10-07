@@ -1,7 +1,7 @@
 import { useField } from 'formik';
 import css from './FormCheckbox.module.css';
-import { IconCheckboxUnchecked } from '../icons/IconCheckBoxUnchecked.jsx';
-import { IconCheckboxChecked } from '../icons/IconCheckboxChecked.jsx';
+import { IconCheckboxUnchecked } from '../../icons/IconCheckBoxUnchecked.jsx';
+import { IconCheckboxChecked } from '../../icons/IconCheckboxChecked.jsx';
 import { useId } from 'react';
 import clsx from "clsx";
 

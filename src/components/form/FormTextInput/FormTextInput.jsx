@@ -1,5 +1,5 @@
 import { useField } from 'formik';
-import React, { useId } from 'react';
+import { useId } from 'react';
 import css from './FormTextInput.module.css';
 import clsx from 'clsx';
 
