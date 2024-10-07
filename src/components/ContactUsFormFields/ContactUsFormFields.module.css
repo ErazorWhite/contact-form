@@ -13,6 +13,7 @@
     min-height: 60px;
     background-color: var(--color-green-600);
     color: var(--color-white);
+    border: none;
     border-radius: 8px;
     transition: var(--animation);
     cursor: pointer;
