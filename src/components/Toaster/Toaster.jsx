@@ -1,7 +1,7 @@
 import React from 'react';
 import { Toast } from './Toast';
 import css from './Toaster.module.css';
-import { useNotifications } from './NotificationContext';
+import { useNotifications } from '../../utilities/notifications';
 
 export const Toaster = () => {
   const { toasts, removeToast } = useNotifications();
@@ -11,6 +11,7 @@ export const Toaster = () => {
       {toasts.map(({headMessage, bodyMessage, duration, id}) => (
         <Toast
           key={id}
+          id={id}
           headMessage={headMessage}
           bodyMessage={bodyMessage}
           duration={duration}

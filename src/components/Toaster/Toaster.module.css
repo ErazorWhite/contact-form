@@ -9,11 +9,11 @@
 .toasterContainer {
     position: fixed;
     display: flex;
+    flex-direction: column-reverse;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     min-width: 280px;
-    flex-direction: column;
     gap: 16px;
     z-index: 9999;
 }

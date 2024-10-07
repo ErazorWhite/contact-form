@@ -3,7 +3,7 @@ import css from './ContactUsForm.module.css';
 import { Formik } from 'formik';
 import { ContactUsFormFields } from '../ContactUsFormFields/ContactUsFormFields.jsx';
 import { contactUsFormValidationSchema } from '../../utilities/validationSchemas.js';
-import { notifyExternally } from '../Toaster/NotificationContext.jsx';
+import { notifyExternally } from '../../utilities/notifications';
 
 const initialValues = {
   firstName: '',

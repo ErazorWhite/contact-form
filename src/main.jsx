@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { ContactUsForm } from './components/ContactUsForm/ContactUsForm.jsx';
-import { NotificationProvider } from './components/Toaster/NotificationContext.jsx';
+import { NotificationProvider } from './components/NotificationProvider/NotificationProvider.jsx';
 import { Toaster } from './components/Toaster/Toaster.jsx';
 
 createRoot(document.getElementById('root')).render(
