@@ -1,3 +1,5 @@
+@import './typography.css';
+
 .textLabel {
     margin-bottom: 8px;
 
@@ -7,10 +9,12 @@
 }
 
 .inputText {
+    order: 2;
     min-height: 50px;
     min-width: 205px;
     width: 100%;
     padding: 12px 24px;
+    @mixin bodyMediumRegular;
 
     background-color: var(--color-white);
     color: var(--color-grey-900);
@@ -25,7 +29,8 @@
     }
 
     &:required ~ .textLabel::after {
-        content: ' *';
+        content: '*';
+        margin-left: 8px;
         display: inline;
         color: var(--color-green-600);
     }

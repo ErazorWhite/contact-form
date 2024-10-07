@@ -8,38 +8,15 @@
     @mixin bodySmall;
 }
 
-.inputTextOrder {
-    order: 2;
-}
-
 .errorOrder {
     order: 3;
 }
 
 .textArea {
-    order: 2;
     resize: none;
     min-height: 240px;
-    width: 100%;
-    padding: 12px 24px;
 
-    background-color: var(--color-white);
-    color: var(--color-grey-900);
-    border: 1px solid var(--color-grey-500);
-    border-radius: 8px;
-    transition: var(--animation);
     @mixin bodyMediumRegular;
-
-    &:hover {
-        border-color: var(--color-green-600);
-        cursor: pointer;
-    }
-
-    &:required ~ .textLabel::after {
-        content: ' *';
-        display: inline;
-        color: var(--color-green-600);
-    }
 
     @media (--tablet-bp) {
         min-height: 115px;

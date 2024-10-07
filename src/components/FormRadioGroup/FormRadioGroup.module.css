@@ -7,7 +7,8 @@
 }
 
 .required::after {
-    content: ' *';
+    content: '*';
+    margin-left: 8px;
     display: inline;
     color: var(--color-green-600);
 }

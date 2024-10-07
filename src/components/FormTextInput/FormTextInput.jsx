@@ -6,8 +6,8 @@ import clsx from 'clsx';
 export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
   const [field, meta] = useField(props);
   const [Component, className] = isMultiLine
-    ? ['textarea', css.textArea]
-    : ['input', ['inputText', css.inputTextOrder]];
+    ? ['textarea', ['inputText', css.textArea]]
+    : ['input', 'inputText'];
   const isTouchedError = meta.touched && meta.error;
 
   const id = useId();

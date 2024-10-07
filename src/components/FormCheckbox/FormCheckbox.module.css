@@ -26,7 +26,8 @@
 
 .checkboxInput {
     &:required ~ .checkboxLabel .checkboxText::after {
-        content: ' *';
+        content: '*';
+        margin-left: 8px;
         display: inline;
         color: var(--color-green-600);
     }
