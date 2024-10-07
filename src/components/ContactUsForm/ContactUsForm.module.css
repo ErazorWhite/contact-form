@@ -10,6 +10,6 @@
 
 .textHeader {
     padding-bottom: 32px;
-    line-height: 100%;
+    line-height: 1;
     letter-spacing: -1px;
 }
