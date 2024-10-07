@@ -16,10 +16,13 @@ export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
         {options.map((option) => (
           <li key={option.value} className={css.radioItem}>
             <FormRadioButton
-              option={option}
-              field={field}
+              name={field.name}
+              value={option.value}
               checked={field.value === option.value}
+              onChange={field.onChange}
+              onBlur={field.onBlur}
               required={required}
+              label={option.label}
             />
           </li>
         ))}

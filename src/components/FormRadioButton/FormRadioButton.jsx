@@ -1,8 +1,16 @@
 import clsx from 'clsx';
 import css from './FormRadioButton.module.css';
-import React, { useId } from 'react';
+import { useId } from 'react';
 
-export const FormRadioButton = (props) => {
+export const FormRadioButton = ({
+  name,
+  value,
+  checked,
+  onChange,
+  onBlur,
+  required = false,
+  label,
+}) => {
   const id = useId();
   return (
     <>
@@ -10,17 +18,20 @@ export const FormRadioButton = (props) => {
         type="radio"
         className={clsx('visually-hidden', css.radioInput)}
         id={id}
-        name={props.field.name}
-        value={props.option.value}
-        onChange={props.field.onChange}
-        onBlur={props.field.onBlur}
-        checked={props.field.value === props.option.value}
-        required={props.required}
+        name={name}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        checked={checked}
+        required={required}
       />
 
-      <label htmlFor={id} className={clsx('inputText', css.labelAction, css.radioThumb)}>
+      <label
+        htmlFor={id}
+        className={clsx('inputText', css.labelAction, css.radioThumb)}
+      >
         <span className={css.customRadioButton} />
-        {props.option.label}
+        {label}
       </label>
     </>
   );
