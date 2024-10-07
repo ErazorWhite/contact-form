@@ -30,7 +30,6 @@ export const FormRadioButton = ({
         htmlFor={id}
         className={clsx('inputText', css.labelAction, css.radioThumb)}
       >
-        <span className={css.customRadioButton} />
         {label}
       </label>
     </>
