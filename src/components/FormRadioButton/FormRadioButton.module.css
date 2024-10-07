@@ -7,11 +7,37 @@
 }
 
 .labelAction {
+    position: relative;
+    padding-left: 52px;
 
-    &:hover,
-    &:focus {
-        color: var(--color-green-600);
+    &::before {
+        content: '';
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--color-grey-500);
+        border-radius: 50%;
+
+        input.radioInput:checked ~ & {
+            border-color: var(--color-green-600);
+        }
     }
+
+    input.radioInput:checked ~ &::after {
+        content: '';
+        position: absolute;
+        left: 29px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-green-600);
+        border-radius: 50%;
+    }
+
 }
 
 .customRadioButton {
@@ -26,21 +52,6 @@
     &:checked ~ .radioThumb {
         background-color: var(--color-green-200);
 
-        .customRadioButton {
-            border-color: var(--color-green-600);
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: 11px;
-                height: 11px;
-                background-color: var(--color-green-600);
-                border-radius: 50%;
-            }
-        }
     }
 
     &:focus ~ .radioThumb .customRadioButton {

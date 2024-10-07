@@ -13,13 +13,13 @@ export const FormRadioButton = (props) => {
         name={props.field.name}
         value={props.option.value}
         onChange={props.field.onChange}
-        onBlur={props.field.onBlur}
+        onBlur={props.field.onBlur}gi
         checked={props.field.value === props.option.value}
         required={props.required}
       />
 
       <label htmlFor={id} className={clsx('inputText', css.labelAction, css.radioThumb)}>
-        <span className={css.customRadioButton} />
+        {/*<span className={css.customRadioButton} />*/}
         {props.option.label}
       </label>
     </>
