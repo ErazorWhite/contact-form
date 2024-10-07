@@ -15,11 +15,6 @@ const initialValues = {
   acceptedTerms: false,
 };
 
-const RadioOptions = [
-  { value: 'general', label: 'General Enquiry' },
-  { value: 'support', label: 'Support Request' },
-];
-
 const handleSubmit = (values, { setSubmitting, resetForm }) => {
   setTimeout(() => {
     notifyExternally('Message sent!', 'Thanks for completing the form. We’ll be in touch soon!');
@@ -38,7 +33,7 @@ export const ContactUsForm = () => {
         validationSchema={contactUsFormValidationSchema}
         onSubmit={handleSubmit}
         children={(props) => (
-          <ContactUsFormFields RadioOptions={RadioOptions} {...props} />
+          <ContactUsFormFields {...props} />
         )}
       />
     </div>

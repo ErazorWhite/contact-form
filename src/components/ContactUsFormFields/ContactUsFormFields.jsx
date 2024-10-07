@@ -4,7 +4,12 @@ import { FormTextInput } from '../FormTextInput/FormTextInput.jsx';
 import { FormRadioGroup } from '../FormRadioGroup/FormRadioGroup.jsx';
 import { FormCheckbox } from '../FormCheckbox/FormCheckbox.jsx';
 
-export const ContactUsFormFields = ({ isSubmitting, RadioOptions }) => {
+const RadioOptions = [
+    { value: 'general', label: 'General Enquiry' },
+    { value: 'support', label: 'Support Request' },
+];
+
+export const ContactUsFormFields = ({ isSubmitting }) => {
 
     return (
       <Form>
