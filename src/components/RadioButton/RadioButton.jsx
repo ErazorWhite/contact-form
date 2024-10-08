@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import css from './FormRadioButton.module.css';
+import css from './RadioButton.module.css';
 import { useId } from 'react';
 
-export const FormRadioButton = ({
+export const RadioButton = ({
   name,
   value,
   checked,

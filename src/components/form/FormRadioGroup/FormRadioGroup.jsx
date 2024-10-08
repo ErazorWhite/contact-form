@@ -1,6 +1,6 @@
 import { useField } from 'formik';
 import css from './FormRadioGroup.module.css';
-import { FormRadioButton } from '../FormRadioButton/FormRadioButton.jsx';
+import { RadioButton } from '../../RadioButton/RadioButton.jsx';
 import clsx from 'clsx';
 
 export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
@@ -14,7 +14,7 @@ export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
       <ul className={css.radioList} role="group" aria-labelledby={props.name}>
         {options.map((option) => (
           <li key={option.value} className={css.radioItem}>
-            <FormRadioButton
+            <RadioButton
               name={field.name}
               value={option.value}
               checked={field.value === option.value}
