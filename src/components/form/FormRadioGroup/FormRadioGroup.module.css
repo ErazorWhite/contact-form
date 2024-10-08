@@ -24,21 +24,21 @@
 
 .radioItem {
     flex: 1;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 
     &:focus-within .inputText {
         outline: 2px solid var(--color-grey-900);
     }
 
     &:last-child {
-        padding-bottom: 24px;
+        margin-bottom: 24px;
         @media (--tablet-bp) {
-            padding: 0;
+            margin: 0;
         }
     }
 
     @media (--tablet-bp) {
-        padding-bottom: 0;
+        margin: 0;
         gap: 16px;
         flex-basis: calc((100% - 32px) / 2);
     }
@@ -46,5 +46,6 @@
 
 .radioError {
     color: var(--color-error);
-    margin-top: -16px;
+    margin-top: -8px;
+    margin-bottom: 24px;
 }
