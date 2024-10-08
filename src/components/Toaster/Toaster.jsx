@@ -1,9 +1,9 @@
 import { Toast } from './Toast';
 import css from './Toaster.module.css';
-import { useNotifications } from '../../utilities/notifications';
+import { useToasts } from '../../utilities/notifications';
 
 export const Toaster = () => {
-  const { toasts, removeToast } = useNotifications();
+  const { toasts, removeToast } = useToasts();
 
   return (
     <div className={css.toasterContainer}>

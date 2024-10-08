@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 import {
   NotificationContext,
+  ToastContext,
   eventEmitter,
 } from '../../utilities/notifications';
 import { nanoid } from 'nanoid';
@@ -30,14 +31,16 @@ export const NotificationProvider = ({ children }) => {
     };
   }, [notify]);
 
-  const value = useMemo(
-    () => ({ notify, toasts, removeToast }),
-    [notify, toasts, removeToast]
+  const toastsValue = useMemo(
+      () => ({ toasts, removeToast }),
+      [toasts, removeToast]
   );
 
   return (
-    <NotificationContext.Provider value={value}>
-      {children}
+    <NotificationContext.Provider value={notify}>
+      <ToastContext.Provider value={toastsValue}>
+        {children}
+      </ToastContext.Provider>
     </NotificationContext.Provider>
   );
 };
