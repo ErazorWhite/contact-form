@@ -35,14 +35,18 @@
 
 @font-face {
     font-family: Karla;
-    src: url('./assets/fonts/static/Karla-Bold.ttf');
+    src: url('./assets/fonts/static/Karla-Bold.woff2') format('woff2'),
+            url('./assets/fonts/static/Karla-Bold.woff') format('woff'),
+            url('./assets/fonts/static/Karla-Bold.ttf') format('ttf');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: Karla;
-    src: url('./assets/fonts/static/Karla-Regular.ttf');
+    src: url('./assets/fonts/static/Karla-Regular.woff2') format('woff2'),
+    url('./assets/fonts/static/Karla-Regular.woff') format('woff'),
+    url('./assets/fonts/static/Karla-Regular.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
 }
