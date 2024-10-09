@@ -26,20 +26,20 @@
             background-color: var(--color-green-600);
         }
 
-        input.radioInput:focus ~ & {
-            outline: 2px solid black;
-            outline-offset: 2px;
-        }
     }
 
     &:hover,
     &:focus {
         color: var(--color-green-600);
     }
+
 }
 
 .radioInput {
     &:checked ~ .radioThumb {
         background-color: var(--color-green-200);
+    }
+    &:focus ~ .radioThumb {
+        outline: 1px solid black;
     }
 }
