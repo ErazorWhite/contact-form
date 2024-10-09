@@ -30,6 +30,7 @@
 
 /* Breakpoints */
 @custom-media --tablet-bp (min-width: 768px);
+
 @custom-media --desktop-bp (min-width: 1440px);
 
 @font-face {
@@ -84,6 +85,10 @@ body {
     @media (--tablet-bp) {
         padding-top: 128px;
     }
+}
+
+::selection {
+    background-color: var(--color-green-200);
 }
 
 .container {
