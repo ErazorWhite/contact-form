@@ -1,5 +1,11 @@
 @import '../../../utilities/styling/mixins/typography.css';
 
+.inputBorder {
+    border: 1px solid var(--color-grey-500);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 .inputThumb {
     display: flex;
     flex-direction: column;
@@ -13,15 +19,38 @@
 }
 
 .textArea {
+    display: block;
     resize: none;
     min-height: 240px;
+    border: none;
 
     @mixin bodyMediumRegular;
 
     @media (--tablet-bp) {
         min-height: 115px;
     }
+
 }
+
+.overFlowHidden {
+    order: 2;
+    overflow: hidden;
+    border: none;
+
+    &.hasTextArea {
+        border: 1px solid var(--color-grey-500);
+        border-radius: 8px;
+
+        transition: var(--animation);
+
+        &:hover,
+        &:focus {
+            border-color: var(--color-green-600);
+            cursor: pointer;
+        }
+    }
+}
+
 
 .textAreaMargin {
     margin-bottom: 40px;

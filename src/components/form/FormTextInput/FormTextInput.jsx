@@ -13,16 +13,18 @@ export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
   const id = useId();
   return (
     <div className={clsx(css.inputThumb, isMultiLine && css.textAreaMargin)}>
-      <Component
-        id={id}
-        className={clsx(
-          'inputText',
-          className,
-          isTouchedError && css.inputError
-        )}
-        required={required}
-        {...field}
-      />
+      <div className={clsx(css.overFlowHidden, isMultiLine && css.hasTextArea)}>
+        <Component
+          id={id}
+          className={clsx(
+            'inputText',
+            className,
+            isTouchedError && css.inputError
+          )}
+          required={required}
+          {...field}
+        />
+      </div>
 
       <label className={'textLabel'} htmlFor={id}>
         {label}
