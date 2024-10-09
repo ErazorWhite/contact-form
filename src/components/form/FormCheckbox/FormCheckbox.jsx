@@ -3,7 +3,7 @@ import css from './FormCheckbox.module.css';
 import { IconCheckboxUnchecked } from '../../icons/IconCheckBoxUnchecked.jsx';
 import { IconCheckboxChecked } from '../../icons/IconCheckboxChecked.jsx';
 import { useId } from 'react';
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export const FormCheckbox = ({ label, required, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });

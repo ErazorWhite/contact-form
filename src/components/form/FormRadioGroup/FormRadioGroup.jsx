@@ -4,7 +4,7 @@ import { RadioButton } from '../../RadioButton/RadioButton.jsx';
 import clsx from 'clsx';
 
 export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
-  const [field, meta] = useField({ ...props });
+  const [field, meta] = useField(props);
 
   return (
     <>
@@ -22,6 +22,7 @@ export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
               onBlur={field.onBlur}
               required={required}
               label={option.label}
+              {...props}
             />
           </li>
         ))}

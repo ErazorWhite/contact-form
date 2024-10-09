@@ -23,6 +23,7 @@ export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
           )}
           required={required}
           {...field}
+          {...props}
         />
       </div>
 
