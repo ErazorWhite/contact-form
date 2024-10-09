@@ -6,7 +6,12 @@
     align-items: center;
 }
 
+.labelAction.radioThumb {
+    cursor: pointer;
+}
+
 .labelAction {
+
     &::before {
         content: '';
         width: 16px;
