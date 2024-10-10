@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 export const FormCheckbox = ({ label, required, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
-  const id = useId(); // Генерируем уникальный идентификатор
+  const id = useId();
 
   return (
     <div className={css.checkboxThumb}>
