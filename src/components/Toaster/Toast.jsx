@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
+import { IconCircleCheck } from '../icons';
 import css from './Toaster.module.css';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
