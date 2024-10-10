@@ -1,0 +1,69 @@
+@import '../../utilities/styling/mixins/typography.css';
+
+.toastThumb {
+    padding: 24px;
+    background-color: var(--color-grey-900);
+    border-radius: 12px;
+}
+
+.toasterContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+    gap: 16px;
+    z-index: 9999;
+}
+
+.toastTitle {
+    @mixin bodyMediumBold;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    padding-bottom: 8px;
+}
+
+.toastMessage {
+    @mixin bodySmall;
+    color: var(--color-green-200);
+}
+
+.iconWrapper {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px 0 0;
+    fill: currentColor;
+}
+
+.animateEnter {
+    animation: enterAnimation 0.5s forwards;
+}
+
+.animateLeave {
+    animation: exitAnimation 0.5s forwards;
+}
+
+@keyframes enterAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes exitAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

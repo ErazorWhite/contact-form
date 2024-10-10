@@ -1,0 +1,31 @@
+@define-mixin heading {
+    font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+@define-mixin bodyMediumBold {
+    font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+@define-mixin bodyMediumRegular {
+    font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+@define-mixin bodySmall {
+    font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+}

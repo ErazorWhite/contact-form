@@ -1,0 +1,45 @@
+@import '../../utilities/styling/mixins/typography.css';
+
+.radioThumb {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.labelAction.radioThumb {
+    cursor: pointer;
+}
+
+.labelAction {
+
+    &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px var(--color-grey-500);
+        border: none;
+
+        input.radioInput:checked ~ & {
+            box-shadow: 0 0 0 2px var(--color-green-600);
+            border: 3px solid var(--color-green-200);
+            background-color: var(--color-green-600);
+        }
+
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--color-green-600);
+    }
+
+}
+
+.radioInput {
+    &:checked ~ .radioThumb {
+        background-color: var(--color-green-200);
+    }
+    &:focus ~ .radioThumb {
+        outline: 1px solid black;
+    }
+}

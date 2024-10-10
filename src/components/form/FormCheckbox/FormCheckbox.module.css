@@ -1,0 +1,38 @@
+.checkboxThumb {
+    display: block;
+    margin-bottom: 40px;
+
+    &:focus-within .checkboxMark {
+        outline: 2px solid var(--color-grey-900);
+    }
+}
+
+.checkboxMark {
+    margin: 0 16px 0 0;
+    display: inline-flex;
+    fill: var(--color-grey-500);
+}
+
+.checkboxLabel {
+    display: inline-flex;
+    align-items: center;
+    white-space: normal;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+.checkboxInput {
+    &:required ~ .checkboxLabel .checkboxText::after {
+        content: '*';
+        margin-left: 8px;
+        display: inline;
+        color: var(--color-green-600);
+    }
+
+    &:checked ~ .checkboxLabel .checkboxMark {
+        fill: var(--color-green-600);
+    }
+}

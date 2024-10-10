@@ -1,0 +1,46 @@
+{
+  "name": "contact-form",
+  "private": true,
+  "version": "0.0.2",
+  "homepage": "https://ErazorWhite.github.io/contact-form/",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format": "prettier --write ./src"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "formik": "^2.4.6",
+    "mitt": "^3.0.1",
+    "modern-normalize": "^3.0.1",
+    "nanoid": "^5.0.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@csstools/postcss-global-data": "^3.0.0",
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "cssnano": "^7.0.6",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.47",
+    "postcss-custom-media": "^11.0.1",
+    "postcss-load-config": "^6.0.1",
+    "postcss-mixins": "^11.0.2",
+    "postcss-nested": "^6.2.0",
+    "prettier": "^3.3.3",
+    "prop-types": "^15.8.1",
+    "vite": "^5.4.1"
+  }
+}

@@ -1,0 +1,15 @@
+.formThumb {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 24px;
+
+    @media (--tablet-bp) {
+        padding: 40px;
+    }
+}
+
+.textHeader {
+    padding-bottom: 32px;
+    line-height: 1;
+    letter-spacing: -1px;
+}

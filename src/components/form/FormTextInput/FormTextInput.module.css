@@ -1,0 +1,32 @@
+@import '../../../utilities/styling/mixins/typography.css';
+
+.inputThumb {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    flex: 1;
+    @mixin bodySmall;
+}
+
+.errorOrder {
+    order: 3;
+}
+
+.textArea {
+    resize: none;
+    min-height: 240px;
+
+    @mixin bodyMediumRegular;
+
+    @media (--tablet-bp) {
+        min-height: 115px;
+    }
+}
+
+.textAreaMargin {
+    margin-bottom: 40px;
+}
+
+.inputError {
+    border-color: var(--color-error);
+}

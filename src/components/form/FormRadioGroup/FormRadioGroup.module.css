@@ -1,0 +1,51 @@
+@import '../../../utilities/styling/mixins/typography.css';
+
+.labelThumb {
+    display: flex;
+    gap: 8px;
+    @mixin bodySmall;
+}
+
+.required::after {
+    content: '*';
+    margin-left: 8px;
+    display: inline;
+    color: var(--color-green-600);
+}
+
+.radioList {
+    @media (--tablet-bp) {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+}
+
+.radioItem {
+    flex: 1;
+    margin-bottom: 16px;
+
+    &:focus-within .inputText {
+        outline: 2px solid var(--color-grey-900);
+    }
+
+    &:last-child {
+        margin-bottom: 24px;
+        @media (--tablet-bp) {
+            margin: 0;
+        }
+    }
+
+    @media (--tablet-bp) {
+        margin: 0;
+        gap: 16px;
+        flex-basis: calc((100% - 32px) / 2);
+    }
+}
+
+.radioError {
+    color: var(--color-error);
+    margin-top: -8px;
+    margin-bottom: 24px;
+}

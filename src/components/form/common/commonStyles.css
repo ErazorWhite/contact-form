@@ -1,0 +1,37 @@
+@import '../../../utilities/styling/mixins/typography.css';
+
+.textLabel {
+    margin-bottom: 8px;
+
+    &:last-child {
+        padding: 0;
+    }
+}
+
+.inputText {
+    order: 2;
+    min-height: 50px;
+    min-width: 205px;
+    width: 100%;
+    padding: 12px 24px;
+    @mixin bodyMediumRegular;
+
+    background-color: var(--color-white);
+    color: var(--color-grey-900);
+    border: 1px solid var(--color-grey-500);
+    border-radius: 8px;
+    transition: var(--animation);
+
+    &:hover,
+    &:focus {
+        border-color: var(--color-green-600);
+        cursor: auto;
+    }
+
+    &:required ~ .textLabel::after {
+        content: '*';
+        margin-left: 8px;
+        display: inline;
+        color: var(--color-green-600);
+    }
+}
