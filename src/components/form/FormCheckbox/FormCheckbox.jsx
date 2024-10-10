@@ -4,6 +4,7 @@ import { IconCheckboxUnchecked } from '../../icons/IconCheckBoxUnchecked.jsx';
 import { IconCheckboxChecked } from '../../icons/IconCheckboxChecked.jsx';
 import { useId } from 'react';
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 export const FormCheckbox = ({ label, required, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
@@ -30,4 +31,9 @@ export const FormCheckbox = ({ label, required, ...props }) => {
       ) : null}
     </div>
   );
+};
+
+FormCheckbox.propTypes = {
+    label: PropTypes.string.isRequired,
+    required: PropTypes.bool,
 };

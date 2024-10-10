@@ -5,6 +5,7 @@ import {
   eventEmitter,
 } from '../../utilities/notifications';
 import { nanoid } from 'nanoid';
+import PropTypes from "prop-types";
 
 export const NotificationProvider = ({ children }) => {
   const [toasts, setToasts] = useState([]);
@@ -43,4 +44,8 @@ export const NotificationProvider = ({ children }) => {
       </ToastContext.Provider>
     </NotificationContext.Provider>
   );
+};
+
+NotificationProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

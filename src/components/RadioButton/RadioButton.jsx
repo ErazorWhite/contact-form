@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import css from './RadioButton.module.css';
 import { useId } from 'react';
+import PropTypes from "prop-types";
 
 export const RadioButton = ({
   name,
@@ -34,4 +35,14 @@ export const RadioButton = ({
       </label>
     </>
   );
+};
+
+RadioButton.propTypes = {
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    checked: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func,
+    required: PropTypes.bool,
+    label: PropTypes.string.isRequired,
 };

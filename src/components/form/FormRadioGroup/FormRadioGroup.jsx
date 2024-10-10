@@ -2,8 +2,9 @@ import { useField } from 'formik';
 import css from './FormRadioGroup.module.css';
 import { RadioButton } from '../../RadioButton/RadioButton.jsx';
 import clsx from 'clsx';
+import PropTypes from "prop-types";
 
-export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
+export const FormRadioGroup = ({ groupName, options, required, name, ...props }) => {
   const [field, meta] = useField({ ...props });
 
   return (
@@ -11,7 +12,7 @@ export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
       <legend className={clsx('textLabel', required && css.required)}>
         {groupName}
       </legend>
-      <ul className={css.radioList} role="group" aria-labelledby={props.name}>
+      <ul className={css.radioList} role="group" aria-labelledby={name}>
         {options.map((option) => (
           <li key={option.value} className={css.radioItem}>
             <RadioButton
@@ -31,4 +32,16 @@ export const FormRadioGroup = ({ groupName, options, required, ...props }) => {
       ) : null}
     </>
   );
+};
+
+FormRadioGroup.propTypes = {
+    groupName: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            value: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    required: PropTypes.bool,
 };

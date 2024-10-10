@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const IconCheckboxUnchecked = ({ size = 18}) => {
   return (
     <svg
@@ -12,3 +14,7 @@ export const IconCheckboxUnchecked = ({ size = 18}) => {
     </svg>
   );
 };
+
+IconCheckboxUnchecked.propTypes = {
+  size: PropTypes.number,
+}

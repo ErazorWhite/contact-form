@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import { ContactUsFormFields } from '../ContactUsFormFields/ContactUsFormFields.jsx';
 import { contactUsFormValidationSchema } from '../../../utilities/validationSchemas.js';
 import { notifyExternally } from '../../../utilities/notifications/index.js';
+import PropTypes from "prop-types";
 
 const initialValues = {
   firstName: '',
@@ -37,4 +38,18 @@ export const ContactUsForm = () => {
       />
     </div>
   );
+};
+
+ContactUsForm.propTypes = {
+  initialValues: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    queryType: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    acceptedTerms: PropTypes.bool.isRequired,
+  }).isRequired,
+  validationSchema: PropTypes.object.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  notifyExternally: PropTypes.func.isRequired,
 };

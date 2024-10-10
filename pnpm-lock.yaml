@@ -52,13 +52,13 @@ importers:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.4.47)
       eslint:
-        specifier: ^9.9.0
+        specifier: ^9.11.1
         version: 9.11.1
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.11.1)
       eslint-plugin-react:
-        specifier: ^7.35.0
+        specifier: ^7.37.1
         version: 7.37.1(eslint@9.11.1)
       eslint-plugin-react-hooks:
         specifier: ^5.1.0-rc.0
@@ -87,6 +87,9 @@ importers:
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
       vite:
         specifier: ^5.4.1
         version: 5.4.8(sugarss@4.0.1(postcss@8.4.47))

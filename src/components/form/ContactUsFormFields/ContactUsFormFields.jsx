@@ -3,6 +3,7 @@ import css from './ContactUsFormFields.module.css';
 import { FormTextInput } from '../FormTextInput/FormTextInput.jsx';
 import { FormRadioGroup } from '../FormRadioGroup/FormRadioGroup.jsx';
 import { FormCheckbox } from '../FormCheckbox/FormCheckbox.jsx';
+import PropTypes from "prop-types";
 
 const RadioOptions = [
     { value: 'general', label: 'General Enquiry' },
@@ -33,4 +34,8 @@ export const ContactUsFormFields = ({ isSubmitting }) => {
 
       </Form>
   );
+};
+
+ContactUsFormFields.propTypes = {
+    isSubmitting: PropTypes.bool.isRequired,
 };

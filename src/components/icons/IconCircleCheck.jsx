@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const IconCircleCheck = ({ size = 20 }) => {
   return (
     <svg
@@ -10,3 +12,7 @@ export const IconCircleCheck = ({ size = 20 }) => {
     </svg>
   );
 };
+
+IconCircleCheck.propTypes = {
+  size: PropTypes.number,
+}

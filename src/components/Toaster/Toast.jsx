@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { IconCircleCheck } from '../icons/IconCircleCheck.jsx';
 import css from './Toaster.module.css';
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 export const Toast = ({
   headMessage = 'Done',
@@ -44,3 +45,12 @@ export const Toast = ({
     </div>
   );
 };
+
+Toast.propTypes = {
+  headMessage: PropTypes.string,
+  bodyMessage: PropTypes.string,
+  duration: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
+

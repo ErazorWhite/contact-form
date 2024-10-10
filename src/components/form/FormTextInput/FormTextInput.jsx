@@ -2,6 +2,7 @@ import { useField } from 'formik';
 import { useId } from 'react';
 import css from './FormTextInput.module.css';
 import clsx from 'clsx';
+import PropTypes from "prop-types";
 
 export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
   const [field, meta] = useField(props);
@@ -33,4 +34,11 @@ export const FormTextInput = ({ label, required, isMultiLine, ...props }) => {
       ) : null}
     </div>
   );
+};
+
+FormTextInput.propTypes = {
+    label: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    required: PropTypes.bool,
+    isMultiLine: PropTypes.bool,
 };
