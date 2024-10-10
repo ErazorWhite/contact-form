@@ -79,3 +79,9 @@ Green asterisks next to the field names indicate that they need to be filled in.
 ## Implemented by
 
 [Oleksii Husak](https://www.linkedin.com/in/oleksii-husak/)
+
+## Special thanks to
+
+[Alex Fitiskin](https://github.com/afitiskin),
+[kpogodin](https://github.com/kpogodin),
+[Aleksei Lazev](https://github.com/NotAleksei)
