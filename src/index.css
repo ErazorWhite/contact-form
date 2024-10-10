@@ -79,6 +79,10 @@ body {
     @media (--tablet-bp) {
         padding-top: 128px;
     }
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-green-200) transparent;
+
 }
 
 ::selection {
