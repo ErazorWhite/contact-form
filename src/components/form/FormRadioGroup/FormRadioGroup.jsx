@@ -4,8 +4,8 @@ import { RadioButton } from '../../RadioButton/RadioButton.jsx';
 import clsx from 'clsx';
 import PropTypes from "prop-types";
 
-export const FormRadioGroup = ({ groupName, options, required, name, ...props }) => {
-  const [field, meta] = useField({ ...props });
+export const FormRadioGroup = ({ groupName, options, required, name }) => {
+  const [field, meta] = useField(name);
 
   return (
     <>
