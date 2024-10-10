@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { IconCircleCheck } from '../icons';
-import css from './Toaster.module.css';
+import { css } from './';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
@@ -53,4 +53,3 @@ Toast.propTypes = {
   id: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
 };
-

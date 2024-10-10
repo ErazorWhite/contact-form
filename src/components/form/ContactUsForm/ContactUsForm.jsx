@@ -1,6 +1,6 @@
-import css from './ContactUsForm.module.css';
+import { css } from './';
 import { Formik } from 'formik';
-import { ContactUsFormFields } from '../ContactUsFormFields/ContactUsFormFields.jsx';
+import { ContactUsFormFields } from '../ContactUsFormFields';
 import { contactUsFormValidationSchema } from '../../../utilities/validationSchemas.js';
 import { notifyExternally } from '../../../utilities/notifications/index.js';
 

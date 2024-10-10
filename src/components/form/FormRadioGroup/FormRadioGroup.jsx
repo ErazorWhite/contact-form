@@ -1,8 +1,8 @@
 import { useField } from 'formik';
-import css from './FormRadioGroup.module.css';
-import { RadioButton } from '../../RadioButton/RadioButton.jsx';
+import { css } from './';
+import { RadioButton } from '../../RadioButton';
 import clsx from 'clsx';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 export const FormRadioGroup = ({ groupName, options, required, name }) => {
   const [field, meta] = useField(name);
@@ -35,13 +35,13 @@ export const FormRadioGroup = ({ groupName, options, required, name }) => {
 };
 
 FormRadioGroup.propTypes = {
-    groupName: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    options: PropTypes.arrayOf(
-        PropTypes.shape({
-            value: PropTypes.string.isRequired,
-            label: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    required: PropTypes.bool,
+  groupName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  required: PropTypes.bool,
 };

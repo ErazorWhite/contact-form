@@ -1,5 +1,5 @@
-import { Toast } from './Toast';
-import css from './Toaster.module.css';
+import { Toast } from './';
+import { css } from './';
 import { useToasts } from '../../utilities/notifications';
 
 export const Toaster = () => {
@@ -7,7 +7,7 @@ export const Toaster = () => {
 
   return (
     <div className={css.toasterContainer}>
-      {toasts.map(({headMessage, bodyMessage, duration, id}) => (
+      {toasts.map(({ headMessage, bodyMessage, duration, id }) => (
         <Toast
           key={id}
           id={id}

@@ -1,10 +1,10 @@
 import { useField } from 'formik';
-import css from './FormCheckbox.module.css';
+import { css } from './';
 import { IconCheckboxUnchecked } from '../../icons';
 import { IconCheckboxChecked } from '../../icons';
 import { useId } from 'react';
-import clsx from "clsx";
-import PropTypes from "prop-types";
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 export const FormCheckbox = ({ label, required, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
@@ -34,6 +34,6 @@ export const FormCheckbox = ({ label, required, ...props }) => {
 };
 
 FormCheckbox.propTypes = {
-    label: PropTypes.string.isRequired,
-    required: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  required: PropTypes.bool,
 };
