@@ -82,6 +82,6 @@ Green asterisks next to the field names indicate that they need to be filled in.
 
 ## Special thanks to
 
-[Alex Fitiskin](https://github.com/afitiskin)
-[kpogodin](https://github.com/kpogodin)
+[Alex Fitiskin](https://github.com/afitiskin),
+[kpogodin](https://github.com/kpogodin),
 [Aleksei Lazev](https://github.com/NotAleksei)
