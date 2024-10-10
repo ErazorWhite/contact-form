@@ -15,10 +15,10 @@ const initialValues = {
 
 const handleSubmit = (values, { setSubmitting, resetForm }) => {
   setTimeout(() => {
-    notifyExternally(
-      'Message sent!',
-      'Thanks for completing the form. We’ll be in touch soon!'
-    );
+    notifyExternally({
+      headMessage: 'Message sent!',
+      bodyMessage: 'Thanks for completing the form. We’ll be in touch soon!',
+    });
     resetForm();
     setSubmitting(false);
   }, 750);
